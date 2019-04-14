@@ -20,10 +20,9 @@ hs_err_pid*
 .classpath
 
 ### Gradle ###
-/.gradle/
+
 /build/
 
 # Mac DS file
 .DS_Store
 
-/classes/
