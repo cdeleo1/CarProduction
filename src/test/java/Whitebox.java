@@ -5,71 +5,82 @@ import org.junit.Before;
 import org.junit.Test;
 
 import main.java.builder.*;
-import main.java.builder.CarOld.CarBuilder;
 
 public class Whitebox {
 	
-	CarOld basicCar;
+	Car customCar = new Car();
 	
 	@Before
 	public void setUp() throws Exception {
 		
-		basicCar = new CarBuilder("Mazda", "RX8", 
-        		"Transit Mazda", "Red", "Sport", 0, "Leather", "Manual", 22.0)
-				.build();
+		customCar.Make = "Mazda";
+		customCar.Model = "RX8";
+		customCar.Dealership = "Transit Mazda";
+		customCar.Color = "Red";
+		customCar.VehicleType = "Sport";
+		customCar.NumCylinders = 0;
+		customCar.CabMaterial = "Leather";
+		customCar.Transmission = "Manual";
+		customCar.TireSize = 22.0;
 	}
 	
 	@Test
 	public void testGetMake() {
-		String result = basicCar.getMake();
+		String result = customCar.getMake();
 		assertTrue(result == "Mazda");
 	}
 	
 	@Test
 	public void testGetModel() {
-		String result = basicCar.getModel();
+		String result = customCar.getModel();
 		assertTrue(result == "RX8");
 	}
 	
 	@Test
 	public void testGetDealership() {
-		String result = basicCar.getDealership();
+		String result = customCar.getDealership();
 		assertTrue(result == "Transit Mazda");
 	}
 	
 	@Test
 	public void testGetColor() {
-		String result = basicCar.getColor();
+		String result = customCar.getColor();
 		assertTrue(result == "Red");
 	}
 	
 	@Test
 	public void testGetVehicleType() {
-		String result = basicCar.getVehicleType();
+		String result = customCar.getVehicleType();
 		assertTrue(result == "Sport");
 	}
 	
 	@Test
 	public void testGetNumCylinders() {
-		int result = basicCar.getNumCylinders();
+		int result = customCar.getNumCylinders();
 		assertTrue(result == 0);
 	}
 	
 	@Test
 	public void testGetCabMaterial() {
-		String result = basicCar.getCabMaterial();
+		String result = customCar.getCabMaterial();
 		assertTrue(result == "Leather");
 	}
 	
 	@Test
 	public void testGetTransmission() {
-		String result = basicCar.getTransmission();
+		String result = customCar.getTransmission();
 		assertTrue(result == "Manual");
 	}
 	
 	@Test
 	public void testGetTireSize() {
-		double result = basicCar.getTireSize();
+		double result = customCar.getTireSize();
+		assertTrue(result == 22.0);
+	}
+	
+	@Test
+	public void testGetPrice() {
+		double result = customCar.getPrice();
 		assertTrue(result == 22.0);
 	}
 }

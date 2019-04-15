@@ -31,6 +31,7 @@ public class Car
 	public Boolean getMufflerUpgrade()	{ return this.MufflerUpgrade; }
 	public Boolean getBodyKitUpgrade()	{ return this.BodyKitUpgrade; }
 	public Boolean getEngineUpgrade()	{ return this.EngineUpgrade; }
+	public double getPrice()			{ return this.Price; }
 	
 	public void setMake(String Make)						{ this.Make = Make; }
 	public void setModel(String Model)						{ this.Model = Model; }
@@ -45,6 +46,7 @@ public class Car
 	public void setMufflerUpgrade(Boolean MufflerUpgrade)	{ this.MufflerUpgrade = MufflerUpgrade; }
 	public void setBodyKitUpgrade(Boolean BodyKitUpgrade)	{ this.BodyKitUpgrade = BodyKitUpgrade; }
 	public void setEngineUpgrade(Boolean EngineUpgrade)		{ this.EngineUpgrade = EngineUpgrade; }
+	public void setPrice(double Price)						{ this.Price = Price; }
 	
 	@Override
 	public String toString()
