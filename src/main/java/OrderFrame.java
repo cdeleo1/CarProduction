@@ -9,7 +9,11 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
 
-import main.java.builder.CarOld;
+import main.java.builder.Car;
+import main.java.builder.CarBuilder;
+import main.java.builder.CarDirector;
+import main.java.builder.HondaSportsCarBuilder;
+import main.java.builder.CustomCarBuilder;
 
 public class OrderFrame extends JFrame
 {
@@ -24,6 +28,10 @@ public class OrderFrame extends JFrame
 	public static String cabMaterialSel;
 	public static String transmissionSel;
 	public static double tireSizeSel;
+	public static Boolean spoilerUpgradeSel;
+	public static Boolean mufflerUpgradeSel;
+	public static Boolean bodyKitUpgradeSel;
+	public static Boolean engineUpgradeSel;
 	
 	public OrderFrame()
 	{
@@ -43,11 +51,11 @@ public class OrderFrame extends JFrame
 		JButton applyButton = new JButton("Apply");
 		JButton purchaseButton = new JButton("Purchase");
 		
-		JRadioButton dealerRB1 = new JRadioButton("Dealer 1");
-		JRadioButton dealerRB2 = new JRadioButton("Dealer 2");
-		JRadioButton dealerRB3 = new JRadioButton("Dealer 3");
-		JRadioButton dealerRB4 = new JRadioButton("Dealer 4");
-		JRadioButton dealerRB5 = new JRadioButton("Dealer 5");
+		JRadioButton dealerRB1 = new JRadioButton("Transit");
+		JRadioButton dealerRB2 = new JRadioButton("Union");
+		JRadioButton dealerRB3 = new JRadioButton("Creek View");
+		JRadioButton dealerRB4 = new JRadioButton("Skyline");
+		JRadioButton dealerRB5 = new JRadioButton("Orchard Park");
 		
 		JRadioButton makeRB1 = new JRadioButton("BMW");
 		JRadioButton makeRB2 = new JRadioButton("Ford");
@@ -55,11 +63,11 @@ public class OrderFrame extends JFrame
 		JRadioButton makeRB4 = new JRadioButton("Mazda");
 		JRadioButton makeRB5 = new JRadioButton("Mitsubishi");
 		
-		JRadioButton modelRB1 = new JRadioButton("Model 1");
-		JRadioButton modelRB2 = new JRadioButton("Model 2");
-		JRadioButton modelRB3 = new JRadioButton("Model 3");
-		JRadioButton modelRB4 = new JRadioButton("Model 4");
-		JRadioButton modelRB5 = new JRadioButton("Model 5");
+		JRadioButton modelRB1 = new JRadioButton("330ci");
+		JRadioButton modelRB2 = new JRadioButton("Mustang");
+		JRadioButton modelRB3 = new JRadioButton("Accord");
+		JRadioButton modelRB4 = new JRadioButton("RX8");
+		JRadioButton modelRB5 = new JRadioButton("Eclips");
 		
 		JRadioButton colorRB1 = new JRadioButton("White");
 		JRadioButton colorRB2 = new JRadioButton("Red");
@@ -241,15 +249,12 @@ public class OrderFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				CarOld car1 = new CarOld.CarBuilder(OrderFrame.makeSel, OrderFrame.modelSel, 
-			    		OrderFrame.dealerSel, OrderFrame.colorSel, OrderFrame.vehicleTypeSel, 
-			    		OrderFrame.numCylindersSel, OrderFrame.cabMaterialSel, 
-			    		OrderFrame.transmissionSel, OrderFrame.tireSizeSel)
-			    	.spoilerUpgrade(true)
-			    	.build();
-			    
-			    System.out.println(car1);
-				System.out.println("Applied");
+				CarDirector carDirector = new CarDirector();
+				CarBuilder customCarBuilder = new CustomCarBuilder();
+				carDirector.MakeCar(customCarBuilder);
+				Car customCar = customCarBuilder.GetCar();
+			    System.out.println(customCar);
+				System.out.println("Price: "+customCar.Price);
 			}
 		});
 		
@@ -271,13 +276,66 @@ public class OrderFrame extends JFrame
 					makeRB2.setEnabled(false);
 					makeRB3.setEnabled(false);
 					makeRB4.setEnabled(false);
-					makeRB5.setEnabled(false);
-				} else if(makeRB1.isSelected()==false) {
+					makeRB5.setEnabled(false); } 
+				else if(makeRB1.isSelected()==false) {
 					makeRB2.setEnabled(true);
 					makeRB3.setEnabled(true);
 					makeRB4.setEnabled(true);
 					makeRB5.setEnabled(true);
-		}	}	}); 
+				}
+				
+				int i;
+				String dealerStr = "";
+				
+				for (i = 0; i < Main.allDealersInventory.length; i++) {
+					if (makeSel == Main.allDealersInventory[i][1]) {
+						dealerStr = Main.allDealersInventory[i][0];
+					}
+				}
+				
+				if (dealerRB1.getText() == dealerStr) {
+					dealerRB1.setSelected(true);
+					dealerSel = dealerRB1.getText();
+					System.out.println("Selected Dealership: "+dealerRB1.getText());
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB2.getText() == dealerStr) {
+					dealerRB2.setSelected(true);
+					dealerSel = dealerRB2.getText();
+					System.out.println("Selected Dealership: "+dealerRB2.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB3.getText() == dealerStr) {
+					dealerRB3.setSelected(true);
+					dealerSel = dealerRB3.getText();
+					System.out.println("Selected Dealership: "+dealerRB3.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); }
+				else if (dealerRB4.getText() == dealerStr) {
+					dealerRB4.setSelected(true);
+					dealerSel = dealerRB4.getText();
+					System.out.println("Selected Dealership: "+dealerRB4.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB5.getText() == dealerStr) {
+					dealerRB5.setSelected(true);
+					dealerSel = dealerRB5.getText();
+					System.out.println("Selected Dealership: "+dealerRB5.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+				}
+			}	
+		}); 
 		
 		makeRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -287,13 +345,66 @@ public class OrderFrame extends JFrame
 					makeRB1.setEnabled(false);
 					makeRB3.setEnabled(false);
 					makeRB4.setEnabled(false);
-					makeRB5.setEnabled(false);
-				} else if(makeRB2.isSelected()==false) {
+					makeRB5.setEnabled(false); } 
+				else if(makeRB2.isSelected()==false) {
 					makeRB1.setEnabled(true);
 					makeRB3.setEnabled(true);
 					makeRB4.setEnabled(true);
 					makeRB5.setEnabled(true);
-		}	}	}); 
+				}
+
+				int i;
+				String dealerStr = "";
+				
+				for (i = 0; i < Main.allDealersInventory.length; i++) {
+					if (makeSel == Main.allDealersInventory[i][1]) {
+						dealerStr = Main.allDealersInventory[i][0];
+					}
+				}
+				
+				if (dealerRB1.getText() == dealerStr) {
+					dealerRB1.setSelected(true);
+					dealerSel = dealerRB1.getText();
+					System.out.println("Selected Dealership: "+dealerRB1.getText());
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB2.getText() == dealerStr) {
+					dealerRB2.setSelected(true);
+					dealerSel = dealerRB2.getText();
+					System.out.println("Selected Dealership: "+dealerRB2.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB3.getText() == dealerStr) {
+					dealerRB3.setSelected(true);
+					dealerSel = dealerRB3.getText();
+					System.out.println("Selected Dealership: "+dealerRB3.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); }
+				else if (dealerRB4.getText() == dealerStr) {
+					dealerRB4.setSelected(true);
+					dealerSel = dealerRB4.getText();
+					System.out.println("Selected Dealership: "+dealerRB4.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB5.getText() == dealerStr) {
+					dealerRB5.setSelected(true);
+					dealerSel = dealerRB5.getText();
+					System.out.println("Selected Dealership: "+dealerRB5.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+				}
+			}	
+		}); 
 		
 		makeRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -303,13 +414,66 @@ public class OrderFrame extends JFrame
 					makeRB1.setEnabled(false);
 					makeRB2.setEnabled(false);
 					makeRB4.setEnabled(false);
-					makeRB5.setEnabled(false);
-				} else if(makeRB3.isSelected()==false) {
+					makeRB5.setEnabled(false); } 
+				else if(makeRB3.isSelected()==false) {
 					makeRB1.setEnabled(true);
 					makeRB2.setEnabled(true);
 					makeRB4.setEnabled(true);
 					makeRB5.setEnabled(true);
-		}	}	}); 
+				}
+				
+				int i;
+				String dealerStr = "";
+				
+				for (i = 0; i < Main.allDealersInventory.length; i++) {
+					if (makeSel == Main.allDealersInventory[i][1]) {
+						dealerStr = Main.allDealersInventory[i][0];
+					}
+				}
+				
+				if (dealerRB1.getText() == dealerStr) {
+					dealerRB1.setSelected(true);
+					dealerSel = dealerRB1.getText();
+					System.out.println("Selected Dealership: "+dealerRB1.getText());
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB2.getText() == dealerStr)  {
+					dealerRB2.setSelected(true);
+					dealerSel = dealerRB2.getText();
+					System.out.println("Selected Dealership: "+dealerRB2.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB3.getText() == dealerStr) {
+					dealerRB3.setSelected(true);
+					dealerSel = dealerRB3.getText();
+					System.out.println("Selected Dealership: "+dealerRB3.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false);} 
+				else if (dealerRB4.getText() == dealerStr) {
+					dealerRB4.setSelected(true);
+					dealerSel = dealerRB4.getText();
+					System.out.println("Selected Dealership: "+dealerRB4.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB5.getText() == dealerStr) {
+					dealerRB5.setSelected(true);
+					dealerSel = dealerRB5.getText();
+					System.out.println("Selected Dealership: "+dealerRB5.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+				}
+			}	
+		}); 
 		
 		makeRB4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -319,13 +483,66 @@ public class OrderFrame extends JFrame
 					makeRB1.setEnabled(false);
 					makeRB2.setEnabled(false);
 					makeRB3.setEnabled(false);
-					makeRB5.setEnabled(false);
-				} else if(makeRB4.isSelected()==false) {
+					makeRB5.setEnabled(false); } 
+				else if(makeRB4.isSelected()==false) {
 					makeRB1.setEnabled(true);
 					makeRB2.setEnabled(true);
 					makeRB3.setEnabled(true);
 					makeRB5.setEnabled(true);
-		}	}	}); 
+				}
+				
+				int i;
+				String dealerStr = "";
+				
+				for (i = 0; i < Main.allDealersInventory.length; i++) {
+					if (makeSel == Main.allDealersInventory[i][1]) {
+						dealerStr = Main.allDealersInventory[i][0];
+					}
+				}
+				
+				if (dealerRB1.getText() == dealerStr) {
+					dealerRB1.setSelected(true);
+					dealerSel = dealerRB1.getText();
+					System.out.println("Selected Dealership: "+dealerRB1.getText());
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB2.getText() == dealerStr) {
+					dealerRB2.setSelected(true);
+					dealerSel = dealerRB2.getText();
+					System.out.println("Selected Dealership: "+dealerRB2.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB3.getText() == dealerStr) {
+					dealerRB3.setSelected(true);
+					dealerSel = dealerRB3.getText();
+					System.out.println("Selected Dealership: "+dealerRB3.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB4.getText() == dealerStr) {
+					dealerRB4.setSelected(true);
+					dealerSel = dealerRB4.getText();
+					System.out.println("Selected Dealership: "+dealerRB4.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB5.getText() == dealerStr) {
+					dealerRB5.setSelected(true);
+					dealerSel = dealerRB5.getText();
+					System.out.println("Selected Dealership: "+dealerRB5.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+				}
+			}	
+		}); 
 		
 		makeRB5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -335,13 +552,66 @@ public class OrderFrame extends JFrame
 					makeRB1.setEnabled(false);
 					makeRB2.setEnabled(false);
 					makeRB3.setEnabled(false);
-					makeRB4.setEnabled(false);
-				} else if(makeRB5.isSelected()==false) {
+					makeRB4.setEnabled(false); } 
+				else if(makeRB5.isSelected()==false) {
 					makeRB1.setEnabled(true);
 					makeRB2.setEnabled(true);
 					makeRB3.setEnabled(true);
 					makeRB4.setEnabled(true);
-		}	}	});
+				}
+				
+				int i;
+				String dealerStr = "";
+				
+				for (i = 0; i < Main.allDealersInventory.length; i++) {
+					if (makeSel == Main.allDealersInventory[i][1]) {
+						dealerStr = Main.allDealersInventory[i][0]; 
+					}
+				}
+				
+				if (dealerRB1.getText() == dealerStr) {
+					dealerRB1.setSelected(true);
+					dealerSel = dealerRB1.getText();
+					System.out.println("Selected Dealership: "+dealerRB1.getText());
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB2.getText() == dealerStr) {
+					dealerRB2.setSelected(true);
+					dealerSel = dealerRB2.getText();
+					System.out.println("Selected Dealership: "+dealerRB2.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB3.getText() == dealerStr) {
+					dealerRB3.setSelected(true);
+					dealerSel = dealerRB3.getText();
+					System.out.println("Selected Dealership: "+dealerRB3.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB4.setEnabled(false);
+					dealerRB5.setEnabled(false);} 
+				else if (dealerRB4.getText() == dealerStr) {
+					dealerRB4.setSelected(true);
+					dealerSel = dealerRB4.getText();
+					System.out.println("Selected Dealership: "+dealerRB4.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB5.setEnabled(false); } 
+				else if (dealerRB5.getText() == dealerStr) {
+					dealerRB5.setSelected(true);
+					dealerSel = dealerRB5.getText();
+					System.out.println("Selected Dealership: "+dealerRB5.getText());
+					dealerRB1.setEnabled(false);
+					dealerRB2.setEnabled(false);
+					dealerRB3.setEnabled(false);
+					dealerRB4.setEnabled(false); 
+				}
+			}	
+		}); 
 		
 		//////////////// 	DEALERSHIP SELECTION 			/////////////////
 		dealerRB1.addActionListener(new ActionListener() {

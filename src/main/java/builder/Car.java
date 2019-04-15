@@ -49,7 +49,7 @@ public class Car
 	@Override
 	public String toString()
 	{
-		return "Car details: "+this.Make+" "+this.Model+" | Color: "+this.Color+
+		return "Dealership: "+this.Dealership+" | Car details: "+this.Make+" "+this.Model+" | Color: "+this.Color+
 				" | Classification: "+this.VehicleType+" | Engine: "+this.NumCylinders+
 				" | Transmission: "+this.Transmission+" | Interior: "+this.CabMaterial+
 				" | Tire size: "+this.TireSize+" | Spoiler upgrade: "+this.SpoilerUpgrade+
