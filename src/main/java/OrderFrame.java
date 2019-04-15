@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
 
-import main.java.builder.Car;
+import main.java.builder.CarOld;
 
 public class OrderFrame extends JFrame
 {
@@ -241,7 +241,7 @@ public class OrderFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				Car car1 = new Car.CarBuilder(OrderFrame.makeSel, OrderFrame.modelSel, 
+				CarOld car1 = new CarOld.CarBuilder(OrderFrame.makeSel, OrderFrame.modelSel, 
 			    		OrderFrame.dealerSel, OrderFrame.colorSel, OrderFrame.vehicleTypeSel, 
 			    		OrderFrame.numCylindersSel, OrderFrame.cabMaterialSel, 
 			    		OrderFrame.transmissionSel, OrderFrame.tireSizeSel)

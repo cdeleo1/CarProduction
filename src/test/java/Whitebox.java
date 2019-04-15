@@ -5,11 +5,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import main.java.builder.*;
-import main.java.builder.Car.CarBuilder;
+import main.java.builder.CarOld.CarBuilder;
 
 public class Whitebox {
 	
-	Car basicCar;
+	CarOld basicCar;
 	
 	@Before
 	public void setUp() throws Exception {

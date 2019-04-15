@@ -13,5 +13,13 @@ public class Main
 		System.out.println(dealership1);
 		
 		new OrderFrame();	// Opens a GUI for customers to place an order
+		
+		// Demonstration of the Builder Pattern
+		CarDirector carDirector = new CarDirector();
+		CarBuilder hondaSportsCarBuilder = new HondaSportsCarBuilder();
+		carDirector.MakeCar(hondaSportsCarBuilder);
+		Car sportsCar = hondaSportsCarBuilder.GetCar();
+		System.out.println(sportsCar);
+		System.out.println();
 	}
 }
