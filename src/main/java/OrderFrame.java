@@ -11,7 +11,7 @@ import javax.swing.JTabbedPane;
 
 import main.java.builder.Car;
 
-public class MainFrame extends JFrame
+public class OrderFrame extends JFrame
 {
 	static int MAIN_FRAME_WIDTH = 800;
 	static int MAIN_FRAME_HEIGHT = 600;
@@ -25,7 +25,7 @@ public class MainFrame extends JFrame
 	public static String transmissionSel;
 	public static double tireSizeSel;
 	
-	public MainFrame()
+	public OrderFrame()
 	{
 		JFrame tabFrame = new JFrame();
 
@@ -241,10 +241,10 @@ public class MainFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				Car car1 = new Car.CarBuilder(MainFrame.makeSel, MainFrame.modelSel, 
-			    		MainFrame.dealerSel, MainFrame.colorSel, MainFrame.vehicleTypeSel, 
-			    		MainFrame.numCylindersSel, MainFrame.cabMaterialSel, 
-			    		MainFrame.transmissionSel, MainFrame.tireSizeSel)
+				Car car1 = new Car.CarBuilder(OrderFrame.makeSel, OrderFrame.modelSel, 
+			    		OrderFrame.dealerSel, OrderFrame.colorSel, OrderFrame.vehicleTypeSel, 
+			    		OrderFrame.numCylindersSel, OrderFrame.cabMaterialSel, 
+			    		OrderFrame.transmissionSel, OrderFrame.tireSizeSel)
 			    	.spoilerUpgrade(true)
 			    	.build();
 			    

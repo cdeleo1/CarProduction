@@ -5,9 +5,9 @@ import main.java.builder.Car.CarBuilder;
 public class Car 
 {
 	public final String make; 			// Required
-	public final String model; 		// Required
-	public final String dealership;	// Required
-	public final String color; 		// Required
+	public final String model; 			// Required
+	public final String dealership;		// Required
+	public final String color; 			// Required
 	public final String vehicleType;	// Required
 	public final int numCylinders;		// Required
 	public final String cabMaterial;	// Required
