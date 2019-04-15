@@ -4,10 +4,13 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import main.java.builder.*;
+import main.java.builder.CarDirector;
+import main.java.builder.CarBuilder;
+import main.java.builder.Car;
+import main.java.builder.HondaSportsCarBuilder;
 
 public class Whitebox {
-	
+
 	Car customCar = new Car();
 	
 	@Before
@@ -22,6 +25,7 @@ public class Whitebox {
 		customCar.CabMaterial = "Leather";
 		customCar.Transmission = "Manual";
 		customCar.TireSize = 22.0;
+		customCar.Price = 22000;
 	}
 	
 	@Test
@@ -81,6 +85,6 @@ public class Whitebox {
 	@Test
 	public void testGetPrice() {
 		double result = customCar.getPrice();
-		assertTrue(result == 22.0);
+		assertTrue(result == 22000);
 	}
 }
