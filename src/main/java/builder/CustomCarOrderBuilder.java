@@ -34,16 +34,16 @@ public class CustomCarOrderBuilder extends CarOrderBuilder
 	public void AddTireSize() { carOrder.TireSize = OrderFrame.tireSizeSel; }
 	
 	@Override
-	public void AddSpoilerUpgrade() { carOrder.SpoilerUpgrade = OrderFrame.spoilerUpgradeSel; }
+	public void AddSpoilerUpgrade() { carOrder.SpoilerUpgrade = OrderFrame.getSpoilerUpgradeSel(); }
 	
 	@Override
-	public void AddMufflerUpgrade() { carOrder.MufflerUpgrade = OrderFrame.mufflerUpgradeSel; }
+	public void AddMufflerUpgrade() { carOrder.MufflerUpgrade = OrderFrame.getMufflerUpgradeSel(); }
 	
 	@Override
-	public void AddBodyKitUpgrade() { carOrder.BodyKitUpgrade = OrderFrame.bodyKitUpgradeSel; }
+	public void AddBodyKitUpgrade() { carOrder.BodyKitUpgrade = OrderFrame.getBodyKitUpgradeSel(); }
 	
 	@Override
-	public void AddEngineUpgrade() { carOrder.EngineUpgrade = OrderFrame.engineUpgradeSel; }
+	public void AddEngineUpgrade() { carOrder.EngineUpgrade = OrderFrame.getEngineUpgradeSel(); }
 	
 	@Override
 	public void SetPrice() 

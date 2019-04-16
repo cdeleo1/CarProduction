@@ -30,10 +30,10 @@ public class OrderFrame extends JFrame
 	public static String cabMaterialSel;
 	public static String transmissionSel;
 	public static double tireSizeSel;
-	public final Boolean spoilerUpgradeSel = false;
-	public final Boolean mufflerUpgradeSel = false;
-	public final Boolean bodyKitUpgradeSel = false;
-	public final Boolean engineUpgradeSel = false;
+	private static Boolean spoilerUpgradeSel = false;
+	private static Boolean mufflerUpgradeSel = false;
+	private static Boolean bodyKitUpgradeSel = false;
+	private static Boolean engineUpgradeSel = false;
 	
 	public static String[][] allDealersInventory = Main.getAllDealersInventory();
 	
@@ -1202,5 +1202,33 @@ public class OrderFrame extends JFrame
 					tireSizeRB3.setEnabled(true);
 					tireSizeRB4.setEnabled(true);
 		}	}	});
+	}
+
+	public static Boolean getSpoilerUpgradeSel() {
+		return spoilerUpgradeSel;
+	}
+
+	public static void setSpoilerUpgradeSel(Boolean spoilerUpgradeSel) {
+		OrderFrame.spoilerUpgradeSel = spoilerUpgradeSel;
+	}
+
+	public static Boolean getMufflerUpgradeSel() {
+		return mufflerUpgradeSel;
+	}
+
+	public static Boolean getBodyKitUpgradeSel() {
+		return bodyKitUpgradeSel;
+	}
+
+	public static void setBodyKitUpgradeSel(Boolean bodyKitUpgradeSel) {
+		OrderFrame.bodyKitUpgradeSel = bodyKitUpgradeSel;
+	}
+
+	public static Boolean getEngineUpgradeSel() {
+		return engineUpgradeSel;
+	}
+
+	public static void setEngineUpgradeSel(Boolean engineUpgradeSel) {
+		OrderFrame.engineUpgradeSel = engineUpgradeSel;
 	}
 }
