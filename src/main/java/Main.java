@@ -49,7 +49,7 @@ public class Main {
         CarOrderDirector carOrderDirector = new CarOrderDirector();
         CarOrderBuilder hondaSportsCarBuilder = new HondaSportsCarOrderBuilder();
         carOrderDirector.makeCar(hondaSportsCarBuilder);
-        CarOrder sportsCar = hondaSportsCarBuilder.GetCar();
+        CarOrder sportsCar = hondaSportsCarBuilder.getCar();
         System.out.println(sportsCar);
 
         ////////////////////////////////////////////////////////////////////////////

@@ -6,32 +6,32 @@ public class CarOrderDirector {
         System.out.println("------------------------");
 
         System.out.println("Adding make...");
-        carOrderBuilder.AddMake();
+        carOrderBuilder.addMake();
         System.out.println("Adding dealership...");
-        carOrderBuilder.AddDealership();
+        carOrderBuilder.addDealership();
         System.out.println("Adding model...");
-        carOrderBuilder.AddModel();
+        carOrderBuilder.addModel();
         System.out.println("Adding color...");
-        carOrderBuilder.AddColor();
+        carOrderBuilder.addColor();
         System.out.println("Adding Vehicle Type...");
-        carOrderBuilder.AddVehicleType();
+        carOrderBuilder.addVehicleType();
         System.out.println("Adding Number of Cylinders...");
-        carOrderBuilder.AddNumCylinders();
+        carOrderBuilder.addNumCylinders();
         System.out.println("Adding Cab Material...");
-        carOrderBuilder.AddCabMaterial();
+        carOrderBuilder.addCabMaterial();
         System.out.println("Adding transmission...");
-        carOrderBuilder.AddTransmission();
+        carOrderBuilder.addTransmission();
         System.out.println("Adding Tire Size...");
-        carOrderBuilder.AddTireSize();
+        carOrderBuilder.addTireSize();
         System.out.println("Adding Spoiler Upgrade...");
-        carOrderBuilder.AddSpoilerUpgrade();
+        carOrderBuilder.addSpoilerUpgrade();
         System.out.println("Adding Muffler Upgrade...");
-        carOrderBuilder.AddMufflerUpgrade();
+        carOrderBuilder.addMufflerUpgrade();
         System.out.println("Adding Body Kit Upgrade...");
-        carOrderBuilder.AddBodyKitUpgrade();
+        carOrderBuilder.addBodyKitUpgrade();
         System.out.println("Adding Engine Upgrade...");
-        carOrderBuilder.AddEngineUpgrade();
+        carOrderBuilder.addEngineUpgrade();
         System.out.println("Setting price...");
-        carOrderBuilder.SetPrice();
+        carOrderBuilder.setPrice();
     }
 }

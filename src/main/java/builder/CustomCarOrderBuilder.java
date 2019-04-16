@@ -6,77 +6,77 @@ public class CustomCarOrderBuilder extends CarOrderBuilder {
     private CarOrder carOrder = new CarOrder();
 
     @Override
-    public void AddMake() {
+    public void addMake() {
         carOrder.make = OrderFrame.getMakeSel();
     }
 
     @Override
-    public void AddDealership() {
+    public void addDealership() {
         carOrder.dealership = OrderFrame.getDealerSel();
     }
 
     @Override
-    public void AddModel() {
+    public void addModel() {
         carOrder.model = OrderFrame.getModelSel();
     }
 
     @Override
-    public void AddColor() {
+    public void addColor() {
         carOrder.color = OrderFrame.getColorSel();
     }
 
     @Override
-    public void AddVehicleType() {
+    public void addVehicleType() {
         carOrder.vehicleType = OrderFrame.getVehicleTypeSel();
     }
 
     @Override
-    public void AddNumCylinders() {
+    public void addNumCylinders() {
         carOrder.numCylinders = OrderFrame.getNumCylindersSel();
     }
 
     @Override
-    public void AddCabMaterial() {
+    public void addCabMaterial() {
         carOrder.cabMaterial = OrderFrame.getCabMaterialSel();
     }
 
     @Override
-    public void AddTransmission() {
+    public void addTransmission() {
         carOrder.transmission = OrderFrame.getTransmissionSel();
     }
 
     @Override
-    public void AddTireSize() {
+    public void addTireSize() {
         carOrder.tireSize = OrderFrame.getTireSizeSel();
     }
 
     @Override
-    public void AddSpoilerUpgrade() {
+    public void addSpoilerUpgrade() {
         carOrder.spoilerUpgrade = OrderFrame.getSpoilerUpgradeSel();
     }
 
     @Override
-    public void AddMufflerUpgrade() {
+    public void addMufflerUpgrade() {
         carOrder.mufflerUpgrade = OrderFrame.getMufflerUpgradeSel();
     }
 
     @Override
-    public void AddBodyKitUpgrade() {
+    public void addBodyKitUpgrade() {
         carOrder.bodyKitUpgrade = OrderFrame.getBodyKitUpgradeSel();
     }
 
     @Override
-    public void AddEngineUpgrade() {
+    public void addEngineUpgrade() {
         carOrder.engineUpgrade = OrderFrame.getEngineUpgradeSel();
     }
 
     @Override
-    public void SetPrice() {
+    public void setPrice() {
         carOrder.price = 22000;
     }
 
     @Override
-    public CarOrder GetCar() {
+    public CarOrder getCar() {
         return carOrder;
     }
 }

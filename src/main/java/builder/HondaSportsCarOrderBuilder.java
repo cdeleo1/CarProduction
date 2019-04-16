@@ -6,77 +6,77 @@ public class HondaSportsCarOrderBuilder extends CarOrderBuilder {
     private CarOrder carOrder = new CarOrder();
 
     @Override
-    public void AddMake() {
+    public void addMake() {
         carOrder.make = "Honda";
     }
 
     @Override
-    public void AddDealership() {
+    public void addDealership() {
         carOrder.dealership = "Transit Road Honda";
     }
 
     @Override
-    public void AddModel() {
+    public void addModel() {
         carOrder.model = "Accord";
     }
 
     @Override
-    public void AddColor() {
+    public void addColor() {
         carOrder.color = "Blue";
     }
 
     @Override
-    public void AddVehicleType() {
+    public void addVehicleType() {
         carOrder.vehicleType = "Sports Car";
     }
 
     @Override
-    public void AddNumCylinders() {
+    public void addNumCylinders() {
         carOrder.numCylinders = 4;
     }
 
     @Override
-    public void AddCabMaterial() {
+    public void addCabMaterial() {
         carOrder.cabMaterial = "Cloth";
     }
 
     @Override
-    public void AddTransmission() {
+    public void addTransmission() {
         carOrder.transmission = "Automatic";
     }
 
     @Override
-    public void AddTireSize() {
+    public void addTireSize() {
         carOrder.tireSize = 22.0;
     }
 
     @Override
-    public void AddSpoilerUpgrade() {
+    public void addSpoilerUpgrade() {
         carOrder.spoilerUpgrade = true;
     }
 
     @Override
-    public void AddMufflerUpgrade() {
+    public void addMufflerUpgrade() {
         carOrder.mufflerUpgrade = true;
     }
 
     @Override
-    public void AddBodyKitUpgrade() {
+    public void addBodyKitUpgrade() {
         carOrder.bodyKitUpgrade = true;
     }
 
     @Override
-    public void AddEngineUpgrade() {
+    public void addEngineUpgrade() {
         carOrder.engineUpgrade = true;
     }
 
     @Override
-    public void SetPrice() {
+    public void setPrice() {
         carOrder.price = 22000;
     }
 
     @Override
-    public CarOrder GetCar() {
+    public CarOrder getCar() {
         return carOrder;
     }
 }

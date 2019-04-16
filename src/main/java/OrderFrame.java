@@ -45,7 +45,7 @@ public class OrderFrame extends JFrame {
 
         JPanel homePanel = new JPanel(); // HOME (MAKE/DEALERSHIP/APPLY/PURCHASE)
 
-        JLabel makeLabel = new JLabel("make/Manufacturer: ");
+        JLabel makeLabel = new JLabel("make/manufacturer: ");
         JLabel dealershipLabel = new JLabel("dealership: ");
         JLabel modelLabel = new JLabel("model: ");
         JLabel colorLabel = new JLabel("color: ");
@@ -254,7 +254,7 @@ public class OrderFrame extends JFrame {
                 CarOrderDirector carOrderDirector = new CarOrderDirector();
                 CarOrderBuilder customCarBuilder = new CustomCarOrderBuilder();
                 carOrderDirector.makeCar(customCarBuilder);
-                CarOrder customCar = customCarBuilder.GetCar();
+                CarOrder customCar = customCarBuilder.getCar();
                 System.out.println(customCar);
                 System.out.println("price: " + customCar.price);
             }

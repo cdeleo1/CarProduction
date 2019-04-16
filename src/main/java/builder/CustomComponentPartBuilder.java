@@ -8,33 +8,33 @@ public class CustomComponentPartBuilder extends ComponentPartBuilder {
 
     @Override
     public void AddPartType() {
-        customComponentPart.PartType = componentPartData[0][0];
+        customComponentPart.partType = componentPartData[0][0];
     }
 
     @Override
     public void AddID() {
-        customComponentPart.ID = componentPartData[0][1];
+        customComponentPart.id = componentPartData[0][1];
         ;
     }
 
     @Override
     public void AddManufacturer() {
-        customComponentPart.Manufacturer = componentPartData[0][2];
+        customComponentPart.manufacturer = componentPartData[0][2];
     }
 
     @Override
     public void AddCompatibility() {
-        customComponentPart.Compatibility[0] = componentPartData[0][3];
+        customComponentPart.compatibility[0] = componentPartData[0][3];
     }
 
     @Override
     public void AddCost() {
-        customComponentPart.Cost = componentPartData[0][4];
+        customComponentPart.cost = componentPartData[0][4];
     }
 
     @Override
     public void AddIsRequired() {
-        customComponentPart.IsRequired = componentPartData[0][5];
+        customComponentPart.isRequired = componentPartData[0][5];
     }
 
     @Override

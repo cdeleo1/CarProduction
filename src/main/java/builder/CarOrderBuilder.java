@@ -1,33 +1,33 @@
 package main.java.builder;
 
 public abstract class CarOrderBuilder {
-    public abstract void AddMake();
+    public abstract void addMake();
 
-    public abstract void AddDealership();
+    public abstract void addDealership();
 
-    public abstract void AddModel();
+    public abstract void addModel();
 
-    public abstract void AddColor();
+    public abstract void addColor();
 
-    public abstract void AddVehicleType();
+    public abstract void addVehicleType();
 
-    public abstract void AddNumCylinders();
+    public abstract void addNumCylinders();
 
-    public abstract void AddCabMaterial();
+    public abstract void addCabMaterial();
 
-    public abstract void AddTransmission();
+    public abstract void addTransmission();
 
-    public abstract void AddTireSize();
+    public abstract void addTireSize();
 
-    public abstract void AddSpoilerUpgrade();
+    public abstract void addSpoilerUpgrade();
 
-    public abstract void AddMufflerUpgrade();
+    public abstract void addMufflerUpgrade();
 
-    public abstract void AddBodyKitUpgrade();
+    public abstract void addBodyKitUpgrade();
 
-    public abstract void AddEngineUpgrade();
+    public abstract void addEngineUpgrade();
 
-    public abstract void SetPrice();
+    public abstract void setPrice();
 
-    public abstract CarOrder GetCar();
+    public abstract CarOrder getCar();
 }
