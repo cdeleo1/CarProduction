@@ -1,10 +1,13 @@
 package test.java;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+
+import main.java.builder.CarOrder;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import main.java.builder.*;
+
 
 public class CarClassTest {
 
