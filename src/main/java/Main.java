@@ -5,13 +5,13 @@ import main.java.builder.*;
 public class Main {
 	
 	// Very basic 2D array initialized as a basis for testing functionality
-	public static String[][] allDealersInventory = {{"Transit", "Mazda", "RX8", "25"},
+	protected static String[][] allDealersInventory = {{"Transit", "Mazda", "RX8", "25"},
 													{"Transit", "Mazda", "Miata", "10"},
 													{"Union", "Honda", "Accord", "17"},
 													{"Union", "Honda", "Civic", "12"}};
 	
 	// Very basic 2D array initialized as a basis for testing functionality
-	public static String[][] componentPartData =   {{"Number of Cylinders", "4", "Honda", "Civic", "800", "true"},
+	protected static String[][] componentPartData =   {{"Number of Cylinders", "4", "Honda", "Civic", "800", "true"},
 													{"Number of Cylinders", "6", "Honda", "Accord", "1000", "true"},
 													{"Number of Cylinders", "6", "Ford", "Mustang", "1500", "true"},
 													{"Number of Cylinders", "8", "Ford", "Mustang", "2000", "true"},
@@ -35,7 +35,7 @@ public class Main {
 		/////////////////////////////////////////////////////////////////////////
 		CarOrderDirector carOrderDirector = new CarOrderDirector();
 		CarOrderBuilder hondaSportsCarBuilder = new HondaSportsCarOrderBuilder();
-		carOrderDirector.MakeCar(hondaSportsCarBuilder);
+		carOrderDirector.makeCar(hondaSportsCarBuilder);
 		CarOrder sportsCar = hondaSportsCarBuilder.GetCar();
 		System.out.println(sportsCar);
 		

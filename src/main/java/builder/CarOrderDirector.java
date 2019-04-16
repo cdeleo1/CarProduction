@@ -2,7 +2,7 @@ package main.java.builder;
 
 public class CarOrderDirector 
 {
-	public void MakeCar(CarOrderBuilder carOrderBuilder)
+	public void makeCar(CarOrderBuilder carOrderBuilder)
 	{
 		System.out.println("BEGIN CAR ORDER BUILDER: ");
 		System.out.println("------------------------");

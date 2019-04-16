@@ -2,7 +2,7 @@ package main.java.builder;
 
 public class ComponentPartDirector 
 {
-	public void MakeComponentPart(ComponentPartBuilder componentPartBuilder)
+	public void makeComponentPart(ComponentPartBuilder componentPartBuilder)
 	{
 		componentPartBuilder.AddPartType();
 		componentPartBuilder.AddID();

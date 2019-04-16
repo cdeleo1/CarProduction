@@ -30,10 +30,10 @@ public class OrderFrame extends JFrame
 	public static String cabMaterialSel;
 	public static String transmissionSel;
 	public static double tireSizeSel;
-	public static Boolean spoilerUpgradeSel;
-	public static Boolean mufflerUpgradeSel;
-	public static Boolean bodyKitUpgradeSel;
-	public static Boolean engineUpgradeSel;
+	public static Boolean spoilerUpgradeSel = false;
+	public static Boolean mufflerUpgradeSel = false;
+	public static Boolean bodyKitUpgradeSel = false;
+	public static Boolean engineUpgradeSel = false;
 	
 	// Initialize the GUI components used to place car orders
 	public OrderFrame() {
@@ -43,13 +43,13 @@ public class OrderFrame extends JFrame
 		JTabbedPane tabbedPane = new JTabbedPane();				// TABBED PANE
 					
 		JPanel homePanel = new JPanel();						// HOME (MAKE/DEALERSHIP/APPLY/PURCHASE)
-		JPanel modelPanel = new JPanel();						// MODEL
+		/*JPanel modelPanel = new JPanel();						// MODEL
 		JPanel colorPanel = new JPanel();						// COLOR
 		JPanel enginePanel = new JPanel();						// ENGINE (VEHICLE TYPE/NUM CYLINDERS)
 		JPanel cabMaterialPanel = new JPanel();					// INTERIOR
 		JPanel transmissionPanel = new JPanel();				// TRANSMISSION
 		JPanel tireSizePanel = new JPanel();					// TIRE SIZE
-		JPanel optionalUpgradesPanel = new JPanel();			// OPTIONAL UPGRADES (SPOILER/MUFFLER/BODY KIT/ENGINE)
+		JPanel optionalUpgradesPanel = new JPanel();*/			// OPTIONAL UPGRADES (SPOILER/MUFFLER/BODY KIT/ENGINE)
 		
 		JLabel makeLabel = new JLabel("Make/Manufacturer: ");
 		JLabel dealershipLabel = new JLabel("Dealership: ");
@@ -344,7 +344,7 @@ public class OrderFrame extends JFrame
 			{
 				CarOrderDirector carOrderDirector = new CarOrderDirector();
 				CarOrderBuilder customCarBuilder = new CustomCarOrderBuilder();
-				carOrderDirector.MakeCar(customCarBuilder);
+				carOrderDirector.makeCar(customCarBuilder);
 				CarOrder customCar = customCarBuilder.GetCar();
 			    System.out.println(customCar);
 				System.out.println("Price: "+customCar.Price);
@@ -381,12 +381,12 @@ public class OrderFrame extends JFrame
 				String dealerStr = "";
 				
 				for (i = 0; i < Main.allDealersInventory.length; i++) {
-					if (makeSel == Main.allDealersInventory[i][1]) {
+					if (makeSel.equals(Main.allDealersInventory[i][1])) {
 						dealerStr = Main.allDealersInventory[i][0];
 					}
 				}
 				
-				if (dealerRB1.getText() == dealerStr) {
+				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
 					dealerSel = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
@@ -394,7 +394,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB2.getText() == dealerStr) {
+				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
 					dealerSel = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
@@ -402,7 +402,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB3.getText() == dealerStr) {
+				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
 					dealerSel = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
@@ -410,7 +410,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); }
-				else if (dealerRB4.getText() == dealerStr) {
+				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
 					dealerSel = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
@@ -418,7 +418,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB5.getText() == dealerStr) {
+				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
 					dealerSel = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
@@ -455,7 +455,7 @@ public class OrderFrame extends JFrame
 					}
 				}
 				
-				if (dealerRB1.getText() == dealerStr) {
+				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
 					dealerSel = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
@@ -463,7 +463,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB2.getText() == dealerStr) {
+				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
 					dealerSel = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
@@ -471,7 +471,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB3.getText() == dealerStr) {
+				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
 					dealerSel = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
@@ -479,7 +479,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); }
-				else if (dealerRB4.getText() == dealerStr) {
+				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
 					dealerSel = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
@@ -487,7 +487,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB5.getText() == dealerStr) {
+				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
 					dealerSel = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
@@ -524,7 +524,7 @@ public class OrderFrame extends JFrame
 					}
 				}
 				
-				if (dealerRB1.getText() == dealerStr) {
+				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
 					dealerSel = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
@@ -532,7 +532,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB2.getText() == dealerStr)  {
+				else if (dealerRB2.getText().equals(dealerStr))  {
 					dealerRB2.setSelected(true);
 					dealerSel = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
@@ -540,7 +540,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB3.getText() == dealerStr) {
+				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
 					dealerSel = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
@@ -548,7 +548,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false);} 
-				else if (dealerRB4.getText() == dealerStr) {
+				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
 					dealerSel = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
@@ -556,7 +556,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB5.getText() == dealerStr) {
+				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
 					dealerSel = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
@@ -593,7 +593,7 @@ public class OrderFrame extends JFrame
 					}
 				}
 				
-				if (dealerRB1.getText() == dealerStr) {
+				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
 					dealerSel = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
@@ -601,7 +601,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB2.getText() == dealerStr) {
+				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
 					dealerSel = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
@@ -609,7 +609,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB3.getText() == dealerStr) {
+				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
 					dealerSel = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
@@ -617,7 +617,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB4.getText() == dealerStr) {
+				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
 					dealerSel = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
@@ -625,7 +625,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB5.getText() == dealerStr) {
+				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
 					dealerSel = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
@@ -662,7 +662,7 @@ public class OrderFrame extends JFrame
 					}
 				}
 				
-				if (dealerRB1.getText() == dealerStr) {
+				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
 					dealerSel = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
@@ -670,7 +670,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB2.getText() == dealerStr) {
+				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
 					dealerSel = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
@@ -678,7 +678,7 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB3.getText() == dealerStr) {
+				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
 					dealerSel = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
@@ -686,7 +686,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB4.setEnabled(false);
 					dealerRB5.setEnabled(false);} 
-				else if (dealerRB4.getText() == dealerStr) {
+				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
 					dealerSel = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
@@ -694,7 +694,7 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB5.setEnabled(false); } 
-				else if (dealerRB5.getText() == dealerStr) {
+				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
 					dealerSel = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());

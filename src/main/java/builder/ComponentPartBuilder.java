@@ -1,11 +1,7 @@
 package main.java.builder;
 
-import main.java.OrderFrame;
-
 public abstract class ComponentPartBuilder 
 {
-	private ComponentPart componentPart = new ComponentPart();
-	
 	public abstract void AddPartType();
 	public abstract void AddID();
 	public abstract void AddManufacturer();
