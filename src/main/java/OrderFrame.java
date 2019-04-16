@@ -35,7 +35,7 @@ public class OrderFrame extends JFrame
 	private static Boolean bodyKitUpgradeSel = false;
 	private static Boolean engineUpgradeSel = false;
 	
-	public static String[][] allDealersInventory = Main.getAllDealersInventory();
+	private static String[][] allDealersInventory = Main.getAllDealersInventory();
 	
 	// Initialize the GUI components used to place car orders
 	public OrderFrame() {
