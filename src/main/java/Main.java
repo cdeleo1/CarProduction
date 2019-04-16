@@ -17,8 +17,8 @@ public class Main {
 													{"Number of Cylinders", "8", "Ford", "Mustang", "2000", "true"},
 													{"Transmission", "Manual", "Honda", "Accord", "1800", "true"}};
 
-	public static String[][] getAllDealersInventory() { return allDealersInventory; }
-	public static String[][] getComponentPartData() { return componentPartData; }
+	public static String[][] getAllDealersInventory() { return allDealersInventory.clone(); }
+	public static String[][] getComponentPartData() { return componentPartData.clone(); }
 	
 	/* Main method */
 	public static void main(String[] args) {
