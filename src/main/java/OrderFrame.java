@@ -35,6 +35,8 @@ public class OrderFrame extends JFrame
 	public static Boolean bodyKitUpgradeSel = false;
 	public static Boolean engineUpgradeSel = false;
 	
+	public static String[][] allDealersInventory = Main.getAllDealersInventory();
+	
 	// Initialize the GUI components used to place car orders
 	public OrderFrame() {
 		
@@ -380,9 +382,9 @@ public class OrderFrame extends JFrame
 				int i;
 				String dealerStr = "";
 				
-				for (i = 0; i < Main.allDealersInventory.length; i++) {
-					if (makeSel.equals(Main.allDealersInventory[i][1])) {
-						dealerStr = Main.allDealersInventory[i][0];
+				for (i = 0; i < allDealersInventory.length; i++) {
+					if (makeSel.equals(allDealersInventory[i][1])) {
+						dealerStr = allDealersInventory[i][0];
 					}
 				}
 				
@@ -449,9 +451,9 @@ public class OrderFrame extends JFrame
 				int i;
 				String dealerStr = "";
 				
-				for (i = 0; i < Main.allDealersInventory.length; i++) {
-					if (makeSel == Main.allDealersInventory[i][1]) {
-						dealerStr = Main.allDealersInventory[i][0];
+				for (i = 0; i < allDealersInventory.length; i++) {
+					if (makeSel == allDealersInventory[i][1]) {
+						dealerStr = allDealersInventory[i][0];
 					}
 				}
 				
@@ -518,9 +520,9 @@ public class OrderFrame extends JFrame
 				int i;
 				String dealerStr = "";
 				
-				for (i = 0; i < Main.allDealersInventory.length; i++) {
-					if (makeSel == Main.allDealersInventory[i][1]) {
-						dealerStr = Main.allDealersInventory[i][0];
+				for (i = 0; i < allDealersInventory.length; i++) {
+					if (makeSel == allDealersInventory[i][1]) {
+						dealerStr = allDealersInventory[i][0];
 					}
 				}
 				
@@ -587,9 +589,9 @@ public class OrderFrame extends JFrame
 				int i;
 				String dealerStr = "";
 				
-				for (i = 0; i < Main.allDealersInventory.length; i++) {
-					if (makeSel == Main.allDealersInventory[i][1]) {
-						dealerStr = Main.allDealersInventory[i][0];
+				for (i = 0; i < allDealersInventory.length; i++) {
+					if (makeSel == allDealersInventory[i][1]) {
+						dealerStr = allDealersInventory[i][0];
 					}
 				}
 				
@@ -656,9 +658,9 @@ public class OrderFrame extends JFrame
 				int i;
 				String dealerStr = "";
 				
-				for (i = 0; i < Main.allDealersInventory.length; i++) {
-					if (makeSel == Main.allDealersInventory[i][1]) {
-						dealerStr = Main.allDealersInventory[i][0]; 
+				for (i = 0; i < allDealersInventory.length; i++) {
+					if (makeSel == allDealersInventory[i][1]) {
+						dealerStr = allDealersInventory[i][0]; 
 					}
 				}
 				

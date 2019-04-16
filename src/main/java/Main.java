@@ -5,18 +5,21 @@ import main.java.builder.*;
 public class Main {
 	
 	// Very basic 2D array initialized as a basis for testing functionality
-	protected static String[][] allDealersInventory = {{"Transit", "Mazda", "RX8", "25"},
+	private static String[][] allDealersInventory = {{"Transit", "Mazda", "RX8", "25"},
 													{"Transit", "Mazda", "Miata", "10"},
 													{"Union", "Honda", "Accord", "17"},
 													{"Union", "Honda", "Civic", "12"}};
 	
 	// Very basic 2D array initialized as a basis for testing functionality
-	protected static String[][] componentPartData =   {{"Number of Cylinders", "4", "Honda", "Civic", "800", "true"},
+	private static String[][] componentPartData =   {{"Number of Cylinders", "4", "Honda", "Civic", "800", "true"},
 													{"Number of Cylinders", "6", "Honda", "Accord", "1000", "true"},
 													{"Number of Cylinders", "6", "Ford", "Mustang", "1500", "true"},
 													{"Number of Cylinders", "8", "Ford", "Mustang", "2000", "true"},
 													{"Transmission", "Manual", "Honda", "Accord", "1800", "true"}};
 
+	public static String[][] getAllDealersInventory() { return allDealersInventory; }
+	public static String[][] getComponentPartData() { return componentPartData; }
+	
 	/* Main method */
 	public static void main(String[] args) {
 		
