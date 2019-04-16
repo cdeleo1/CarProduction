@@ -1,72 +1,72 @@
 package main.java.builder;
 
 public class CarOrder {
-    public String Make; // Required
-    public String Model; // Required
-    public String Dealership; // Required
-    public String Color; // Required
-    public String VehicleType; // Required
-    public int NumCylinders; // Required
-    public String CabMaterial; // Required
-    public String Transmission; // Required
-    public double TireSize; // Required
-    public Boolean SpoilerUpgrade; // Optional
-    public Boolean MufflerUpgrade; // Optional
-    public Boolean BodyKitUpgrade; // Optional
-    public Boolean EngineUpgrade; // Optional
+    public String make; // Required
+    public String model; // Required
+    public String dealership; // Required
+    public String color; // Required
+    public String vehicleType; // Required
+    public int numCylinders; // Required
+    public String cabMaterial; // Required
+    public String transmission; // Required
+    public double tireSize; // Required
+    public Boolean spoilerUpgrade; // Optional
+    public Boolean mufflerUpgrade; // Optional
+    public Boolean bodyKitUpgrade; // Optional
+    public Boolean engineUpgrade; // Optional
 
     public double Price; // Required
 
     public String getMake() {
-        return this.Make;
+        return this.make;
     }
 
     public String getModel() {
-        return this.Model;
+        return this.model;
     }
 
     public String getDealership() {
-        return this.Dealership;
+        return this.dealership;
     }
 
     public String getColor() {
-        return this.Color;
+        return this.color;
     }
 
     public String getVehicleType() {
-        return this.VehicleType;
+        return this.vehicleType;
     }
 
     public int getNumCylinders() {
-        return this.NumCylinders;
+        return this.numCylinders;
     }
 
     public String getCabMaterial() {
-        return this.CabMaterial;
+        return this.cabMaterial;
     }
 
     public String getTransmission() {
-        return this.Transmission;
+        return this.transmission;
     }
 
     public double getTireSize() {
-        return this.TireSize;
+        return this.tireSize;
     }
 
     public Boolean getSpoilerUpgrade() {
-        return this.SpoilerUpgrade;
+        return this.spoilerUpgrade;
     }
 
     public Boolean getMufflerUpgrade() {
-        return this.MufflerUpgrade;
+        return this.mufflerUpgrade;
     }
 
     public Boolean getBodyKitUpgrade() {
-        return this.BodyKitUpgrade;
+        return this.bodyKitUpgrade;
     }
 
     public Boolean getEngineUpgrade() {
-        return this.EngineUpgrade;
+        return this.engineUpgrade;
     }
 
     public double getPrice() {
@@ -74,55 +74,55 @@ public class CarOrder {
     }
 
     public void setMake(String Make) {
-        this.Make = Make;
+        this.make = Make;
     }
 
     public void setModel(String Model) {
-        this.Model = Model;
+        this.model = Model;
     }
 
     public void setDealership(String Dealership) {
-        this.Dealership = Dealership;
+        this.dealership = Dealership;
     }
 
     public void setColor(String Color) {
-        this.Color = Color;
+        this.color = Color;
     }
 
     public void setVehicleType(String VehicleType) {
-        this.VehicleType = VehicleType;
+        this.vehicleType = VehicleType;
     }
 
     public void setNumCylinders(int NumCylinders) {
-        this.NumCylinders = NumCylinders;
+        this.numCylinders = NumCylinders;
     }
 
     public void setCabMaterial(String CabMaterial) {
-        this.CabMaterial = CabMaterial;
+        this.cabMaterial = CabMaterial;
     }
 
     public void setTransmission(String Transmission) {
-        this.Transmission = Transmission;
+        this.transmission = Transmission;
     }
 
     public void setTireSize(double TireSize) {
-        this.TireSize = TireSize;
+        this.tireSize = TireSize;
     }
 
     public void setSpoilerUpgrade(Boolean SpoilerUpgrade) {
-        this.SpoilerUpgrade = SpoilerUpgrade;
+        this.spoilerUpgrade = SpoilerUpgrade;
     }
 
     public void setMufflerUpgrade(Boolean MufflerUpgrade) {
-        this.MufflerUpgrade = MufflerUpgrade;
+        this.mufflerUpgrade = MufflerUpgrade;
     }
 
     public void setBodyKitUpgrade(Boolean BodyKitUpgrade) {
-        this.BodyKitUpgrade = BodyKitUpgrade;
+        this.bodyKitUpgrade = BodyKitUpgrade;
     }
 
     public void setEngineUpgrade(Boolean EngineUpgrade) {
-        this.EngineUpgrade = EngineUpgrade;
+        this.engineUpgrade = EngineUpgrade;
     }
 
     public void setPrice(double Price) {
@@ -131,11 +131,11 @@ public class CarOrder {
 
     @Override
     public String toString() {
-        return "Dealership: " + this.Dealership + " | Car Order details: " + this.Make + " " + this.Model + " | Color: "
-                + this.Color + " | Classification: " + this.VehicleType + " | Engine: " + this.NumCylinders
-                + " | Transmission: " + this.Transmission + " | Interior: " + this.CabMaterial + " | Tire size: "
-                + this.TireSize + " | Spoiler upgrade: " + this.SpoilerUpgrade + " | Muffler upgrade: "
-                + this.MufflerUpgrade + " | Body kit upgrade: " + this.BodyKitUpgrade + " | Engine upgrade: "
-                + this.EngineUpgrade;
+        return "dealership: " + this.dealership + " | Car Order details: " + this.make + " " + this.model + " | color: "
+                + this.color + " | Classification: " + this.vehicleType + " | Engine: " + this.numCylinders
+                + " | transmission: " + this.transmission + " | Interior: " + this.cabMaterial + " | Tire size: "
+                + this.tireSize + " | Spoiler upgrade: " + this.spoilerUpgrade + " | Muffler upgrade: "
+                + this.mufflerUpgrade + " | Body kit upgrade: " + this.bodyKitUpgrade + " | Engine upgrade: "
+                + this.engineUpgrade;
     }
 }

@@ -14,7 +14,7 @@ public class Main {
             { "Number of Cylinders", "6", "Honda", "Accord", "1000", "true" },
             { "Number of Cylinders", "6", "Ford", "Mustang", "1500", "true" },
             { "Number of Cylinders", "8", "Ford", "Mustang", "2000", "true" },
-            { "Transmission", "Manual", "Honda", "Accord", "1800", "true" } };
+            { "transmission", "Manual", "Honda", "Accord", "1800", "true" } };
 
     public static String[][] getAllDealersInventory() {
         return allDealersInventory.clone();

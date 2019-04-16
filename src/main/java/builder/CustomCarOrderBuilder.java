@@ -7,67 +7,67 @@ public class CustomCarOrderBuilder extends CarOrderBuilder {
 
     @Override
     public void AddMake() {
-        carOrder.Make = OrderFrame.getMakeSel();
+        carOrder.make = OrderFrame.getMakeSel();
     }
 
     @Override
     public void AddDealership() {
-        carOrder.Dealership = OrderFrame.getDealerSel();
+        carOrder.dealership = OrderFrame.getDealerSel();
     }
 
     @Override
     public void AddModel() {
-        carOrder.Model = OrderFrame.getModelSel();
+        carOrder.model = OrderFrame.getModelSel();
     }
 
     @Override
     public void AddColor() {
-        carOrder.Color = OrderFrame.getColorSel();
+        carOrder.color = OrderFrame.getColorSel();
     }
 
     @Override
     public void AddVehicleType() {
-        carOrder.VehicleType = OrderFrame.getVehicleTypeSel();
+        carOrder.vehicleType = OrderFrame.getVehicleTypeSel();
     }
 
     @Override
     public void AddNumCylinders() {
-        carOrder.NumCylinders = OrderFrame.getNumCylindersSel();
+        carOrder.numCylinders = OrderFrame.getNumCylindersSel();
     }
 
     @Override
     public void AddCabMaterial() {
-        carOrder.CabMaterial = OrderFrame.getCabMaterialSel();
+        carOrder.cabMaterial = OrderFrame.getCabMaterialSel();
     }
 
     @Override
     public void AddTransmission() {
-        carOrder.Transmission = OrderFrame.getTransmissionSel();
+        carOrder.transmission = OrderFrame.getTransmissionSel();
     }
 
     @Override
     public void AddTireSize() {
-        carOrder.TireSize = OrderFrame.getTireSizeSel();
+        carOrder.tireSize = OrderFrame.getTireSizeSel();
     }
 
     @Override
     public void AddSpoilerUpgrade() {
-        carOrder.SpoilerUpgrade = OrderFrame.getSpoilerUpgradeSel();
+        carOrder.spoilerUpgrade = OrderFrame.getSpoilerUpgradeSel();
     }
 
     @Override
     public void AddMufflerUpgrade() {
-        carOrder.MufflerUpgrade = OrderFrame.getMufflerUpgradeSel();
+        carOrder.mufflerUpgrade = OrderFrame.getMufflerUpgradeSel();
     }
 
     @Override
     public void AddBodyKitUpgrade() {
-        carOrder.BodyKitUpgrade = OrderFrame.getBodyKitUpgradeSel();
+        carOrder.bodyKitUpgrade = OrderFrame.getBodyKitUpgradeSel();
     }
 
     @Override
     public void AddEngineUpgrade() {
-        carOrder.EngineUpgrade = OrderFrame.getEngineUpgradeSel();
+        carOrder.engineUpgrade = OrderFrame.getEngineUpgradeSel();
     }
 
     @Override

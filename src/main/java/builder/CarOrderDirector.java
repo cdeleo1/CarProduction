@@ -5,13 +5,13 @@ public class CarOrderDirector {
         System.out.println("BEGIN CAR ORDER BUILDER: ");
         System.out.println("------------------------");
 
-        System.out.println("Adding Make...");
+        System.out.println("Adding make...");
         carOrderBuilder.AddMake();
-        System.out.println("Adding Dealership...");
+        System.out.println("Adding dealership...");
         carOrderBuilder.AddDealership();
-        System.out.println("Adding Model...");
+        System.out.println("Adding model...");
         carOrderBuilder.AddModel();
-        System.out.println("Adding Color...");
+        System.out.println("Adding color...");
         carOrderBuilder.AddColor();
         System.out.println("Adding Vehicle Type...");
         carOrderBuilder.AddVehicleType();
@@ -19,7 +19,7 @@ public class CarOrderDirector {
         carOrderBuilder.AddNumCylinders();
         System.out.println("Adding Cab Material...");
         carOrderBuilder.AddCabMaterial();
-        System.out.println("Adding Transmission...");
+        System.out.println("Adding transmission...");
         carOrderBuilder.AddTransmission();
         System.out.println("Adding Tire Size...");
         carOrderBuilder.AddTireSize();

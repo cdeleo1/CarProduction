@@ -13,15 +13,15 @@ public class CarClassTest {
     @Before
     public void setUp() throws Exception {
 
-        customCar.Make = "Mazda";
-        customCar.Model = "RX8";
-        customCar.Dealership = "Transit Mazda";
-        customCar.Color = "Red";
-        customCar.VehicleType = "Sport";
-        customCar.NumCylinders = 0;
-        customCar.CabMaterial = "Leather";
-        customCar.Transmission = "Manual";
-        customCar.TireSize = 22.0;
+        customCar.make = "Mazda";
+        customCar.model = "RX8";
+        customCar.dealership = "Transit Mazda";
+        customCar.color = "Red";
+        customCar.vehicleType = "Sport";
+        customCar.numCylinders = 0;
+        customCar.cabMaterial = "Leather";
+        customCar.transmission = "Manual";
+        customCar.tireSize = 22.0;
         customCar.Price = 22000;
     }
 

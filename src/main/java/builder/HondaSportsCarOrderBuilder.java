@@ -7,67 +7,67 @@ public class HondaSportsCarOrderBuilder extends CarOrderBuilder {
 
     @Override
     public void AddMake() {
-        carOrder.Make = "Honda";
+        carOrder.make = "Honda";
     }
 
     @Override
     public void AddDealership() {
-        carOrder.Dealership = "Transit Road Honda";
+        carOrder.dealership = "Transit Road Honda";
     }
 
     @Override
     public void AddModel() {
-        carOrder.Model = "Accord";
+        carOrder.model = "Accord";
     }
 
     @Override
     public void AddColor() {
-        carOrder.Color = "Blue";
+        carOrder.color = "Blue";
     }
 
     @Override
     public void AddVehicleType() {
-        carOrder.VehicleType = "Sports Car";
+        carOrder.vehicleType = "Sports Car";
     }
 
     @Override
     public void AddNumCylinders() {
-        carOrder.NumCylinders = 4;
+        carOrder.numCylinders = 4;
     }
 
     @Override
     public void AddCabMaterial() {
-        carOrder.CabMaterial = "Cloth";
+        carOrder.cabMaterial = "Cloth";
     }
 
     @Override
     public void AddTransmission() {
-        carOrder.Transmission = "Automatic";
+        carOrder.transmission = "Automatic";
     }
 
     @Override
     public void AddTireSize() {
-        carOrder.TireSize = 22.0;
+        carOrder.tireSize = 22.0;
     }
 
     @Override
     public void AddSpoilerUpgrade() {
-        carOrder.SpoilerUpgrade = true;
+        carOrder.spoilerUpgrade = true;
     }
 
     @Override
     public void AddMufflerUpgrade() {
-        carOrder.MufflerUpgrade = true;
+        carOrder.mufflerUpgrade = true;
     }
 
     @Override
     public void AddBodyKitUpgrade() {
-        carOrder.BodyKitUpgrade = true;
+        carOrder.bodyKitUpgrade = true;
     }
 
     @Override
     public void AddEngineUpgrade() {
-        carOrder.EngineUpgrade = true;
+        carOrder.engineUpgrade = true;
     }
 
     @Override
