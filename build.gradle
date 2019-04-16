@@ -20,12 +20,12 @@ dependencies {
   compile "junit:junit:4.12" 
 }
 
-test {
+/*test {
 	filter {
 		//specific test class
 		includeTestsMatching "Whitebox"
 	}
-}
+}*/
 
 ///////////////////////////////////////////////////////////////////////////
 // Configure Checkstyle
