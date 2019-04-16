@@ -54,9 +54,11 @@ public class OrderFrame extends JFrame {
         JLabel cabMaterialLabel = new JLabel("Interior material: ");
         JLabel transmissionLabel = new JLabel("transmission: ");
         JLabel tireSizeLabel = new JLabel("Tire size (inches): ");
-
-        JButton applyButton = new JButton("Apply"); // APPLY (HOME TAB - CALCULATES PRICE)
-        JButton purchaseButton = new JButton("Purchase"); // PURCHASE (HOME TAB - SENDS ORDER TO DEALERSHIP)
+        
+        // APPLY (HOME TAB - CALCULATES PRICE)
+        JButton applyButton = new JButton("Apply");
+        // PURCHASE (HOME TAB - SENDS ORDER TO DEALERSHIP)
+        JButton purchaseButton = new JButton("Purchase");
 
         JRadioButton dealerRB1 = new JRadioButton("Transit");
         JRadioButton dealerRB2 = new JRadioButton("Union");

@@ -3,7 +3,7 @@ package main.java.builder;
 public abstract class ComponentPartBuilder {
     public abstract void addPartType();
 
-    public abstract void addID();
+    public abstract void addId();
 
     public abstract void addManufacturer();
 

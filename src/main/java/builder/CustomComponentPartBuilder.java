@@ -12,7 +12,7 @@ public class CustomComponentPartBuilder extends ComponentPartBuilder {
     }
 
     @Override
-    public void addID() {
+    public void addId() {
         customComponentPart.id = componentPartData[0][1];
         ;
     }
