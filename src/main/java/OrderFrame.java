@@ -30,10 +30,10 @@ public class OrderFrame extends JFrame
 	public static String cabMaterialSel;
 	public static String transmissionSel;
 	public static double tireSizeSel;
-	public static Boolean spoilerUpgradeSel = false;
-	public static Boolean mufflerUpgradeSel = false;
-	public static Boolean bodyKitUpgradeSel = false;
-	public static Boolean engineUpgradeSel = false;
+	public final Boolean spoilerUpgradeSel = false;
+	public final Boolean mufflerUpgradeSel = false;
+	public final Boolean bodyKitUpgradeSel = false;
+	public final Boolean engineUpgradeSel = false;
 	
 	public static String[][] allDealersInventory = Main.getAllDealersInventory();
 	
@@ -390,7 +390,7 @@ public class OrderFrame extends JFrame
 				
 				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
-					dealerSel = dealerRB1.getText();
+					dealerStr = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -398,7 +398,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
-					dealerSel = dealerRB2.getText();
+					dealerStr = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -406,7 +406,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
-					dealerSel = dealerRB3.getText();
+					dealerStr = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -414,7 +414,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); }
 				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
-					dealerSel = dealerRB4.getText();
+					dealerStr = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -422,13 +422,15 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
-					dealerSel = dealerRB5.getText();
+					dealerStr = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 				}
+				
+				dealerSel = dealerStr;
 			}	
 		}); 
 		
@@ -459,7 +461,7 @@ public class OrderFrame extends JFrame
 				
 				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
-					dealerSel = dealerRB1.getText();
+					dealerStr = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -467,7 +469,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
-					dealerSel = dealerRB2.getText();
+					dealerStr = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -475,7 +477,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
-					dealerSel = dealerRB3.getText();
+					dealerStr = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -483,7 +485,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); }
 				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
-					dealerSel = dealerRB4.getText();
+					dealerStr = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -491,13 +493,15 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
-					dealerSel = dealerRB5.getText();
+					dealerStr = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 				}
+				
+				dealerSel = dealerStr;
 			}	
 		}); 
 		
@@ -528,7 +532,7 @@ public class OrderFrame extends JFrame
 				
 				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
-					dealerSel = dealerRB1.getText();
+					dealerStr = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -536,7 +540,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB2.getText().equals(dealerStr))  {
 					dealerRB2.setSelected(true);
-					dealerSel = dealerRB2.getText();
+					dealerStr = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -544,7 +548,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
-					dealerSel = dealerRB3.getText();
+					dealerStr = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -552,7 +556,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false);} 
 				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
-					dealerSel = dealerRB4.getText();
+					dealerStr = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -560,13 +564,15 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
-					dealerSel = dealerRB5.getText();
+					dealerStr = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 				}
+				
+				dealerSel = dealerStr;
 			}	
 		}); 
 		
@@ -597,7 +603,7 @@ public class OrderFrame extends JFrame
 				
 				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
-					dealerSel = dealerRB1.getText();
+					dealerStr = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -605,7 +611,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
-					dealerSel = dealerRB2.getText();
+					dealerStr = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -613,7 +619,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
-					dealerSel = dealerRB3.getText();
+					dealerStr = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -621,7 +627,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
-					dealerSel = dealerRB4.getText();
+					dealerStr = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -629,13 +635,15 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
-					dealerSel = dealerRB5.getText();
+					dealerStr = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false);
 				}
+				
+				dealerSel = dealerStr;
 			}	
 		}); 
 		
@@ -666,7 +674,7 @@ public class OrderFrame extends JFrame
 				
 				if (dealerRB1.getText().equals(dealerStr)) {
 					dealerRB1.setSelected(true);
-					dealerSel = dealerRB1.getText();
+					dealerStr = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -674,7 +682,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB2.getText().equals(dealerStr)) {
 					dealerRB2.setSelected(true);
-					dealerSel = dealerRB2.getText();
+					dealerStr = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -682,7 +690,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB3.getText().equals(dealerStr)) {
 					dealerRB3.setSelected(true);
-					dealerSel = dealerRB3.getText();
+					dealerStr = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -690,7 +698,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false);} 
 				else if (dealerRB4.getText().equals(dealerStr)) {
 					dealerRB4.setSelected(true);
-					dealerSel = dealerRB4.getText();
+					dealerStr = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -698,21 +706,24 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(false); } 
 				else if (dealerRB5.getText().equals(dealerStr)) {
 					dealerRB5.setSelected(true);
-					dealerSel = dealerRB5.getText();
+					dealerStr = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
 					dealerRB4.setEnabled(false); 
 				}
+				
+				dealerSel = dealerStr;
 			}	
 		}); 
 		
 		//////////////// 	DEALERSHIP SELECTION 			/////////////////
 		dealerRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String dealerStr = "";
 				if(dealerRB1.isSelected()==true) {
-					dealerSel = dealerRB1.getText();
+					dealerStr = dealerRB1.getText();
 					System.out.println("Selected Dealership: "+dealerRB1.getText());
 					dealerRB2.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -723,12 +734,17 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(true);
 					dealerRB4.setEnabled(true);
 					dealerRB5.setEnabled(true);
-		}	}	}); 
+				}
+				
+				dealerSel = dealerStr;
+			}	
+		}); 
 		
 		dealerRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String dealerStr = "";
 				if(dealerRB2.isSelected()==true) {
-					dealerSel = dealerRB2.getText();
+					dealerStr = dealerRB2.getText();
 					System.out.println("Selected Dealership: "+dealerRB2.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB3.setEnabled(false);
@@ -739,12 +755,17 @@ public class OrderFrame extends JFrame
 					dealerRB3.setEnabled(true);
 					dealerRB4.setEnabled(true);
 					dealerRB5.setEnabled(true);
-		}	}	}); 
+				}
+				
+				dealerSel = dealerStr;
+			}	
+		}); 
 		
 		dealerRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String dealerStr = "";
 				if(dealerRB3.isSelected()==true) {
-					dealerSel = dealerRB3.getText();
+					dealerStr = dealerRB3.getText();
 					System.out.println("Selected Dealership: "+dealerRB3.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -755,12 +776,17 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(true);
 					dealerRB4.setEnabled(true);
 					dealerRB5.setEnabled(true);
-		}	}	}); 
+				}
+				
+				dealerSel = dealerStr;
+			}	
+		}); 
 		
 		dealerRB4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String dealerStr = "";
 				if(dealerRB4.isSelected()==true) {
-					dealerSel = dealerRB4.getText();
+					dealerStr = dealerRB4.getText();
 					System.out.println("Selected Dealership: "+dealerRB4.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -771,12 +797,17 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(true);
 					dealerRB3.setEnabled(true);
 					dealerRB5.setEnabled(true);
-		}	}	}); 
+				}	
+				
+				dealerSel = dealerStr;
+			}	
+		}); 
 		
 		dealerRB5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String dealerStr = "";
 				if(dealerRB5.isSelected()==true) {
-					dealerSel = dealerRB5.getText();
+					dealerStr = dealerRB5.getText();
 					System.out.println("Selected Dealership: "+dealerRB5.getText());
 					dealerRB1.setEnabled(false);
 					dealerRB2.setEnabled(false);
@@ -787,13 +818,18 @@ public class OrderFrame extends JFrame
 					dealerRB2.setEnabled(true);
 					dealerRB3.setEnabled(true);
 					dealerRB4.setEnabled(true);
-		}	}	});
+				}
+				
+				dealerSel = dealerStr;
+			}	
+		});
 		
 		////////////////	MODEL SELECTION 		/////////////////
 		modelRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String modelStr = "";
 				if(modelRB1.isSelected()==true) {
-					modelSel = modelRB1.getText();
+					modelStr = modelRB1.getText();
 					System.out.println("Selected Model: "+modelRB1.getText());
 					modelRB2.setEnabled(false);
 					modelRB3.setEnabled(false);
@@ -804,12 +840,16 @@ public class OrderFrame extends JFrame
 					modelRB3.setEnabled(true);
 					modelRB4.setEnabled(true);
 					modelRB5.setEnabled(true);
-		}	}	}); 
+				}
+				modelSel = modelStr;
+			}	
+		}); 
 
 		modelRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String modelStr = "";
 				if(modelRB2.isSelected()==true) {
-					modelSel = modelRB2.getText();
+					modelStr = modelRB2.getText();
 					System.out.println("Selected Model: "+modelRB2.getText());
 					modelRB1.setEnabled(false);
 					modelRB3.setEnabled(false);
@@ -820,12 +860,16 @@ public class OrderFrame extends JFrame
 					modelRB3.setEnabled(true);
 					modelRB4.setEnabled(true);
 					modelRB5.setEnabled(true);
-		}	}	}); 
+				}
+				modelSel = modelStr;
+			}	
+		}); 
 
 		modelRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String modelStr = "";
 				if(modelRB3.isSelected()==true) {
-					modelSel = modelRB3.getText();
+					modelStr = modelRB3.getText();
 					System.out.println("Selected Model: "+modelRB3.getText());
 					modelRB1.setEnabled(false);
 					modelRB2.setEnabled(false);
@@ -836,12 +880,16 @@ public class OrderFrame extends JFrame
 					modelRB2.setEnabled(true);
 					modelRB4.setEnabled(true);
 					modelRB5.setEnabled(true);
-		}	}	}); 
+				}
+				modelSel = modelStr;
+			}	
+		}); 
 
 		modelRB4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String modelStr = "";
 				if(modelRB4.isSelected()==true) {
-					modelSel = modelRB4.getText();
+					modelStr = modelRB4.getText();
 					System.out.println("Selected Model: "+modelRB4.getText());
 					modelRB1.setEnabled(false);
 					modelRB2.setEnabled(false);
@@ -852,12 +900,16 @@ public class OrderFrame extends JFrame
 					modelRB2.setEnabled(true);
 					modelRB3.setEnabled(true);
 					modelRB5.setEnabled(true);
-		}	}	}); 
+				}
+				modelSel = modelStr;
+			}	
+		}); 
 
 		modelRB5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String modelStr = "";
 				if(modelRB5.isSelected()==true) {
-					modelSel = modelRB5.getText();
+					modelStr = modelRB5.getText();
 					System.out.println("Selected Model: "+modelRB5.getText());
 					modelRB1.setEnabled(false);
 					modelRB2.setEnabled(false);
@@ -868,7 +920,10 @@ public class OrderFrame extends JFrame
 					modelRB2.setEnabled(true);
 					modelRB3.setEnabled(true);
 					modelRB4.setEnabled(true);
-		}	}	});
+				}
+				modelSel = modelStr;
+			}	
+		}); 
 		
 		////////////////	COLOR SELECTION 	/////////////////
 		colorRB1.addActionListener(new ActionListener() {
