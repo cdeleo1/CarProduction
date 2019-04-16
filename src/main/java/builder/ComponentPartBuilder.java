@@ -1,17 +1,17 @@
 package main.java.builder;
 
 public abstract class ComponentPartBuilder {
-    public abstract void AddPartType();
+    public abstract void addPartType();
 
-    public abstract void AddID();
+    public abstract void addID();
 
-    public abstract void AddManufacturer();
+    public abstract void addManufacturer();
 
-    public abstract void AddCompatibility();
+    public abstract void addCompatibility();
 
-    public abstract void AddCost();
+    public abstract void addCost();
 
-    public abstract void AddIsRequired();
+    public abstract void addIsRequired();
 
-    public abstract ComponentPart GetComponentPart();
+    public abstract ComponentPart getComponentPart();
 }

@@ -4,7 +4,7 @@ public class ComponentPart {
     public String partType; // Required
     public String id; // Required
     public String manufacturer; // Required
-    public String compatibility[]; // Required
+    public String[] compatibility; // Required
     public String cost; // Required
     public String isRequired; // Required
 
@@ -12,7 +12,7 @@ public class ComponentPart {
         return this.partType;
     }
 
-    public String getID() {
+    public String getId() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public class ComponentPart {
         this.partType = partType;
     }
 
-    public void setID(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -58,8 +58,10 @@ public class ComponentPart {
 
     @Override
     public String toString() {
-        return "manufacturer: " + this.manufacturer + " | Car Order details: " + this.partType + " " + this.id
-                + " | compatibility: " + this.compatibility + " | Classification: " + this.cost + " | Engine: "
+        return "manufacturer: " + this.manufacturer 
+                + " | Car Order details: " + this.partType + " " 
+                + this.id + " | compatibility: " + this.compatibility 
+                + " | Classification: " + this.cost + " | Engine: "
                 + this.isRequired;
     }
 }

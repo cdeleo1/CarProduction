@@ -7,38 +7,38 @@ public class CustomComponentPartBuilder extends ComponentPartBuilder {
     public String[][] componentPartData = Main.getComponentPartData();
 
     @Override
-    public void AddPartType() {
+    public void addPartType() {
         customComponentPart.partType = componentPartData[0][0];
     }
 
     @Override
-    public void AddID() {
+    public void addID() {
         customComponentPart.id = componentPartData[0][1];
         ;
     }
 
     @Override
-    public void AddManufacturer() {
+    public void addManufacturer() {
         customComponentPart.manufacturer = componentPartData[0][2];
     }
 
     @Override
-    public void AddCompatibility() {
+    public void addCompatibility() {
         customComponentPart.compatibility[0] = componentPartData[0][3];
     }
 
     @Override
-    public void AddCost() {
+    public void addCost() {
         customComponentPart.cost = componentPartData[0][4];
     }
 
     @Override
-    public void AddIsRequired() {
+    public void addIsRequired() {
         customComponentPart.isRequired = componentPartData[0][5];
     }
 
     @Override
-    public ComponentPart GetComponentPart() {
+    public ComponentPart getComponentPart() {
         return customComponentPart;
     }
 }

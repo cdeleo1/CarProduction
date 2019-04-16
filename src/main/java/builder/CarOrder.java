@@ -137,9 +137,9 @@ public class CarOrder {
                 + " | Engine: " + this.numCylinders + " | transmission: " 
                 + this.transmission + " | Interior: " + this.cabMaterial 
                 + " | Tire size: " + this.tireSize + " | Spoiler upgrade: " 
-                + this.spoilerUpgrade + " | Muffler upgrade: " + 
-                this.mufflerUpgrade + " | Body kit upgrade: " + 
-                this.bodyKitUpgrade + " | Engine upgrade: "
+                + this.spoilerUpgrade + " | Muffler upgrade: " 
+                + this.mufflerUpgrade + " | Body kit upgrade: " 
+                + this.bodyKitUpgrade + " | Engine upgrade: "
                 + this.engineUpgrade;
     }
 }
