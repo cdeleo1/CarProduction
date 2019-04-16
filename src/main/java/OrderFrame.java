@@ -44,13 +44,6 @@ public class OrderFrame extends JFrame {
         JTabbedPane tabbedPane = new JTabbedPane(); // TABBED PANE
 
         JPanel homePanel = new JPanel(); // HOME (MAKE/DEALERSHIP/APPLY/PURCHASE)
-        /*
-         * JPanel modelPanel = new JPanel(); // MODEL JPanel colorPanel = new JPanel();
-         * // COLOR JPanel enginePanel = new JPanel(); // ENGINE (VEHICLE TYPE/NUM
-         * CYLINDERS) JPanel cabMaterialPanel = new JPanel(); // INTERIOR JPanel
-         * transmissionPanel = new JPanel(); // TRANSMISSION JPanel tireSizePanel = new
-         * JPanel(); // TIRE SIZE JPanel optionalUpgradesPanel = new JPanel();
-         */ // OPTIONAL UPGRADES (SPOILER/MUFFLER/BODY KIT/ENGINE)
 
         JLabel makeLabel = new JLabel("make/Manufacturer: ");
         JLabel dealershipLabel = new JLabel("dealership: ");
@@ -118,13 +111,6 @@ public class OrderFrame extends JFrame {
         tabFrame.setVisible(true);
 
         tabbedPane.add("Home", homePanel);
-        /*
-         * tabbedPane.add("model", modelPanel); tabbedPane.add("color", colorPanel);
-         * tabbedPane.add("Engine", enginePanel); tabbedPane.add("Interior",
-         * cabMaterialPanel); tabbedPane.add("transmission", transmissionPanel);
-         * tabbedPane.add("Tires", tireSizePanel); tabbedPane.add("Optional Upgrades",
-         * optionalUpgradesPanel);
-         */
 
         tabbedPane.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
         tabbedPane.setVisible(true);
@@ -216,17 +202,6 @@ public class OrderFrame extends JFrame {
         applyButton.setBounds(550, 500, 100, 30);
         purchaseButton.setBounds(650, 500, 100, 30);
 
-        // MODEL PANEL SETUP //
-        /*
-         * modelPanel.add(modelLabel);
-         * 
-         * modelPanel.add(modelRB1); modelPanel.add(modelRB2); modelPanel.add(modelRB3);
-         * modelPanel.add(modelRB4); modelPanel.add(modelRB5);
-         * 
-         * modelPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
-         * modelPanel.setLayout(null); modelPanel.setVisible(true);
-         */
-
         modelLabel.setBounds(305, 5, 150, 30);
 
         modelRB1.setBounds(305, 25, 150, 30);
@@ -234,18 +209,7 @@ public class OrderFrame extends JFrame {
         modelRB3.setBounds(305, 75, 150, 30);
         modelRB4.setBounds(305, 100, 150, 30);
         modelRB5.setBounds(305, 125, 150, 30);
-
-        // COLOR PANEL SETUP //
-        /*
-         * colorPanel.add(colorLabel);
-         * 
-         * colorPanel.add(colorRB1); colorPanel.add(colorRB2); colorPanel.add(colorRB3);
-         * colorPanel.add(colorRB4); colorPanel.add(colorRB5);
-         * 
-         * colorPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
-         * colorPanel.setLayout(null); colorPanel.setVisible(true);
-         */
-
+        
         colorLabel.setBounds(455, 5, 150, 30);
 
         colorRB1.setBounds(455, 25, 150, 30);
@@ -253,22 +217,6 @@ public class OrderFrame extends JFrame {
         colorRB3.setBounds(455, 75, 150, 30);
         colorRB4.setBounds(455, 100, 150, 30);
         colorRB5.setBounds(455, 125, 150, 30);
-
-        // ENGINE PANEL SETUP //
-        /*
-         * enginePanel.add(vehicleTypeLabel);
-         * 
-         * enginePanel.add(vehicleTypeRB1); enginePanel.add(vehicleTypeRB2);
-         * enginePanel.add(vehicleTypeRB3);
-         * 
-         * enginePanel.add(numCylindersLabel);
-         * 
-         * enginePanel.add(numCylindersRB1); enginePanel.add(numCylindersRB2);
-         * enginePanel.add(numCylindersRB3);
-         * 
-         * enginePanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
-         * enginePanel.setLayout(null); enginePanel.setVisible(true);
-         */
 
         vehicleTypeLabel.setBounds(5, 225, 150, 30);
 
@@ -282,48 +230,15 @@ public class OrderFrame extends JFrame {
         numCylindersRB2.setBounds(155, 270, 150, 30);
         numCylindersRB3.setBounds(155, 295, 150, 30);
 
-        // CAB MATERIAL PANEL SETUP //
-        /*
-         * cabMaterialPanel.add(cabMaterialLabel);
-         * 
-         * cabMaterialPanel.add(cabMaterialRB1); cabMaterialPanel.add(cabMaterialRB2);
-         * 
-         * cabMaterialPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
-         * cabMaterialPanel.setLayout(null); cabMaterialPanel.setVisible(true);
-         */
-
         cabMaterialLabel.setBounds(305, 225, 150, 30);
 
         cabMaterialRB1.setBounds(305, 245, 150, 30);
         cabMaterialRB2.setBounds(305, 270, 150, 30);
 
-        // TRANSMISSION PANEL SETUP //
-        /*
-         * transmissionPanel.add(transmissionLabel);
-         * 
-         * transmissionPanel.add(transmissionRB1);
-         * transmissionPanel.add(transmissionRB2);
-         * 
-         * transmissionPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
-         * transmissionPanel.setLayout(null); transmissionPanel.setVisible(true);
-         */
-
         transmissionLabel.setBounds(455, 225, 150, 30);
 
         transmissionRB1.setBounds(455, 245, 150, 30);
         transmissionRB2.setBounds(455, 270, 150, 30);
-
-        // TIRE SIZE PANEL SETUP //
-        /*
-         * tireSizePanel.add(tireSizeLabel);
-         * 
-         * tireSizePanel.add(tireSizeRB1); tireSizePanel.add(tireSizeRB2);
-         * tireSizePanel.add(tireSizeRB3); tireSizePanel.add(tireSizeRB4);
-         * tireSizePanel.add(tireSizeRB5);
-         * 
-         * tireSizePanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
-         * tireSizePanel.setLayout(null); tireSizePanel.setVisible(true);
-         */
 
         tireSizeLabel.setBounds(5, 370, 150, 30);
 

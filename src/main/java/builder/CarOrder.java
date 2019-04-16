@@ -105,8 +105,8 @@ public class CarOrder {
         this.transmission = transmission;
     }
 
-    public void setTireSize(double TireSize) {
-        this.tireSize = TireSize;
+    public void setTireSize(double tireSize) {
+        this.tireSize = tireSize;
     }
 
     public void setSpoilerUpgrade(Boolean spoilerUpgrade) {
@@ -131,11 +131,15 @@ public class CarOrder {
 
     @Override
     public String toString() {
-        return "dealership: " + this.dealership + " | Car Order details: " + this.make + " " + this.model + " | color: "
-                + this.color + " | Classification: " + this.vehicleType + " | Engine: " + this.numCylinders
-                + " | transmission: " + this.transmission + " | Interior: " + this.cabMaterial + " | Tire size: "
-                + this.tireSize + " | Spoiler upgrade: " + this.spoilerUpgrade + " | Muffler upgrade: "
-                + this.mufflerUpgrade + " | Body kit upgrade: " + this.bodyKitUpgrade + " | Engine upgrade: "
+        return "dealership: " + this.dealership + " | Car Order details: " 
+                + this.make + " " + this.model + " | color: "
+                + this.color + " | Classification: " + this.vehicleType 
+                + " | Engine: " + this.numCylinders + " | transmission: " 
+                + this.transmission + " | Interior: " + this.cabMaterial 
+                + " | Tire size: " + this.tireSize + " | Spoiler upgrade: " 
+                + this.spoilerUpgrade + " | Muffler upgrade: " + 
+                this.mufflerUpgrade + " | Body kit upgrade: " + 
+                this.bodyKitUpgrade + " | Engine upgrade: "
                 + this.engineUpgrade;
     }
 }
