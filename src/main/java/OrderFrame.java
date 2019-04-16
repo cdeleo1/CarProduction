@@ -21,15 +21,15 @@ public class OrderFrame extends JFrame
 	static int MAIN_FRAME_WIDTH = 800;
 	static int MAIN_FRAME_HEIGHT = 600;
 	
-	public static String dealerSel;
-	public static String makeSel;
-	public static String modelSel;
-	public static String colorSel;
-	public static String vehicleTypeSel;
-	public static int numCylindersSel;
-	public static String cabMaterialSel;
-	public static String transmissionSel;
-	public static double tireSizeSel;
+	private static String dealerSel;
+	private static String makeSel;
+	private static String modelSel;
+	private static String colorSel;
+	private static String vehicleTypeSel;
+	private static int numCylindersSel;
+	private static String cabMaterialSel;
+	private static String transmissionSel;
+	private static double tireSizeSel;
 	private static Boolean spoilerUpgradeSel = false;
 	private static Boolean mufflerUpgradeSel = false;
 	private static Boolean bodyKitUpgradeSel = false;
@@ -366,7 +366,7 @@ public class OrderFrame extends JFrame
 		makeRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(makeRB1.isSelected()==true) {
-					makeSel = makeRB1.getText();
+					setMakeSel(makeRB1.getText());
 					System.out.println("Selected Make: "+makeRB1.getText());
 					makeRB2.setEnabled(false);
 					makeRB3.setEnabled(false);
@@ -383,7 +383,7 @@ public class OrderFrame extends JFrame
 				String dealerStr = "";
 				
 				for (i = 0; i < allDealersInventory.length; i++) {
-					if (makeSel.equals(allDealersInventory[i][1])) {
+					if (getMakeSel().equals(allDealersInventory[i][1])) {
 						dealerStr = allDealersInventory[i][0];
 					}
 				}
@@ -430,14 +430,14 @@ public class OrderFrame extends JFrame
 					dealerRB4.setEnabled(false);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
 		makeRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(makeRB2.isSelected()==true) {
-					makeSel = makeRB2.getText();
+					setMakeSel(makeRB2.getText());
 					System.out.println("Selected Make: "+makeRB2.getText());
 					makeRB1.setEnabled(false);
 					makeRB3.setEnabled(false);
@@ -454,7 +454,7 @@ public class OrderFrame extends JFrame
 				String dealerStr = "";
 				
 				for (i = 0; i < allDealersInventory.length; i++) {
-					if (makeSel == allDealersInventory[i][1]) {
+					if (getMakeSel() == allDealersInventory[i][1]) {
 						dealerStr = allDealersInventory[i][0];
 					}
 				}
@@ -501,14 +501,14 @@ public class OrderFrame extends JFrame
 					dealerRB4.setEnabled(false);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
 		makeRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(makeRB3.isSelected()==true) {
-					makeSel = makeRB3.getText();
+					setMakeSel(makeRB3.getText());
 					System.out.println("Selected Make: "+makeRB3.getText());
 					makeRB1.setEnabled(false);
 					makeRB2.setEnabled(false);
@@ -525,7 +525,7 @@ public class OrderFrame extends JFrame
 				String dealerStr = "";
 				
 				for (i = 0; i < allDealersInventory.length; i++) {
-					if (makeSel == allDealersInventory[i][1]) {
+					if (getMakeSel() == allDealersInventory[i][1]) {
 						dealerStr = allDealersInventory[i][0];
 					}
 				}
@@ -572,14 +572,14 @@ public class OrderFrame extends JFrame
 					dealerRB4.setEnabled(false);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
 		makeRB4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(makeRB4.isSelected()==true) {
-					makeSel = makeRB4.getText();
+					setMakeSel(makeRB4.getText());
 					System.out.println("Selected Make: "+makeRB4.getText());
 					makeRB1.setEnabled(false);
 					makeRB2.setEnabled(false);
@@ -596,7 +596,7 @@ public class OrderFrame extends JFrame
 				String dealerStr = "";
 				
 				for (i = 0; i < allDealersInventory.length; i++) {
-					if (makeSel == allDealersInventory[i][1]) {
+					if (getMakeSel() == allDealersInventory[i][1]) {
 						dealerStr = allDealersInventory[i][0];
 					}
 				}
@@ -643,14 +643,14 @@ public class OrderFrame extends JFrame
 					dealerRB4.setEnabled(false);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
 		makeRB5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(makeRB5.isSelected()==true) {
-					makeSel = makeRB5.getText();
+					setMakeSel(makeRB5.getText());
 					System.out.println("Selected Make: "+makeRB5.getText());
 					makeRB1.setEnabled(false);
 					makeRB2.setEnabled(false);
@@ -667,7 +667,7 @@ public class OrderFrame extends JFrame
 				String dealerStr = "";
 				
 				for (i = 0; i < allDealersInventory.length; i++) {
-					if (makeSel == allDealersInventory[i][1]) {
+					if (getMakeSel() == allDealersInventory[i][1]) {
 						dealerStr = allDealersInventory[i][0]; 
 					}
 				}
@@ -714,7 +714,7 @@ public class OrderFrame extends JFrame
 					dealerRB4.setEnabled(false); 
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
@@ -736,7 +736,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(true);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
@@ -757,7 +757,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(true);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
@@ -778,7 +778,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(true);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
@@ -799,7 +799,7 @@ public class OrderFrame extends JFrame
 					dealerRB5.setEnabled(true);
 				}	
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		}); 
 		
@@ -820,7 +820,7 @@ public class OrderFrame extends JFrame
 					dealerRB4.setEnabled(true);
 				}
 				
-				dealerSel = dealerStr;
+				setDealerSel(dealerStr);
 			}	
 		});
 		
@@ -841,7 +841,7 @@ public class OrderFrame extends JFrame
 					modelRB4.setEnabled(true);
 					modelRB5.setEnabled(true);
 				}
-				modelSel = modelStr;
+				setModelSel(modelStr);
 			}	
 		}); 
 
@@ -861,7 +861,7 @@ public class OrderFrame extends JFrame
 					modelRB4.setEnabled(true);
 					modelRB5.setEnabled(true);
 				}
-				modelSel = modelStr;
+				setModelSel(modelStr);
 			}	
 		}); 
 
@@ -881,7 +881,7 @@ public class OrderFrame extends JFrame
 					modelRB4.setEnabled(true);
 					modelRB5.setEnabled(true);
 				}
-				modelSel = modelStr;
+				setModelSel(modelStr);
 			}	
 		}); 
 
@@ -901,7 +901,7 @@ public class OrderFrame extends JFrame
 					modelRB3.setEnabled(true);
 					modelRB5.setEnabled(true);
 				}
-				modelSel = modelStr;
+				setModelSel(modelStr);
 			}	
 		}); 
 
@@ -921,7 +921,7 @@ public class OrderFrame extends JFrame
 					modelRB3.setEnabled(true);
 					modelRB4.setEnabled(true);
 				}
-				modelSel = modelStr;
+				setModelSel(modelStr);
 			}	
 		}); 
 		
@@ -929,7 +929,7 @@ public class OrderFrame extends JFrame
 		colorRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(colorRB1.isSelected()==true) {
-					colorSel = colorRB1.getText();
+					setColorSel(colorRB1.getText());
 					System.out.println("Selected Color: "+colorRB1.getText());
 					colorRB2.setEnabled(false);
 					colorRB3.setEnabled(false);
@@ -945,7 +945,7 @@ public class OrderFrame extends JFrame
 		colorRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(colorRB2.isSelected()==true) {
-					colorSel = colorRB2.getText();
+					setColorSel(colorRB2.getText());
 					System.out.println("Selected Color: "+colorRB2.getText());
 					colorRB1.setEnabled(false);
 					colorRB3.setEnabled(false);
@@ -961,7 +961,7 @@ public class OrderFrame extends JFrame
 		colorRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(colorRB3.isSelected()==true) {
-					colorSel = colorRB3.getText();
+					setColorSel(colorRB3.getText());
 					System.out.println("Selected Color: "+colorRB3.getText());
 					colorRB1.setEnabled(false);
 					colorRB2.setEnabled(false);
@@ -977,7 +977,7 @@ public class OrderFrame extends JFrame
 		colorRB4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(colorRB4.isSelected()==true) {
-					colorSel = colorRB4.getText();
+					setColorSel(colorRB4.getText());
 					System.out.println("Selected Color: "+colorRB4.getText());
 					colorRB1.setEnabled(false);
 					colorRB2.setEnabled(false);
@@ -993,7 +993,7 @@ public class OrderFrame extends JFrame
 		colorRB5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(colorRB5.isSelected()==true) {
-					colorSel = colorRB5.getText();
+					setColorSel(colorRB5.getText());
 					System.out.println("Selected Color: "+colorRB5.getText());
 					colorRB1.setEnabled(false);
 					colorRB2.setEnabled(false);
@@ -1010,7 +1010,7 @@ public class OrderFrame extends JFrame
 		vehicleTypeRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(vehicleTypeRB1.isSelected()==true) {
-					vehicleTypeSel = vehicleTypeRB1.getText();
+					setVehicleTypeSel(vehicleTypeRB1.getText());
 					System.out.println("Selected Class: "+vehicleTypeRB1.getText());
 					vehicleTypeRB2.setEnabled(false);
 					vehicleTypeRB3.setEnabled(false);
@@ -1022,7 +1022,7 @@ public class OrderFrame extends JFrame
 		vehicleTypeRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(vehicleTypeRB2.isSelected()==true) {
-					vehicleTypeSel = vehicleTypeRB2.getText();
+					setVehicleTypeSel(vehicleTypeRB2.getText());
 					System.out.println("Selected Class: "+vehicleTypeRB2.getText());
 					vehicleTypeRB1.setEnabled(false);
 					vehicleTypeRB3.setEnabled(false);
@@ -1034,7 +1034,7 @@ public class OrderFrame extends JFrame
 		vehicleTypeRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(vehicleTypeRB3.isSelected()==true) {
-					vehicleTypeSel = vehicleTypeRB3.getText();
+					setVehicleTypeSel(vehicleTypeRB3.getText());
 					System.out.println("Selected Class: "+vehicleTypeRB3.getText());
 					vehicleTypeRB1.setEnabled(false);
 					vehicleTypeRB2.setEnabled(false);
@@ -1047,7 +1047,7 @@ public class OrderFrame extends JFrame
 		numCylindersRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(numCylindersRB1.isSelected()==true) {
-					numCylindersSel = Integer.parseInt(numCylindersRB1.getText());
+					setNumCylindersSel(Integer.parseInt(numCylindersRB1.getText()));
 					System.out.println("Selected Cylinders: "+numCylindersRB1.getText());
 					numCylindersRB2.setEnabled(false);
 					numCylindersRB3.setEnabled(false);
@@ -1059,7 +1059,7 @@ public class OrderFrame extends JFrame
 		numCylindersRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(numCylindersRB2.isSelected()==true) {
-					numCylindersSel = Integer.parseInt(numCylindersRB2.getText());
+					setNumCylindersSel(Integer.parseInt(numCylindersRB2.getText()));
 					System.out.println("Selected Cylinders: "+numCylindersRB2.getText());
 					numCylindersRB1.setEnabled(false);
 					numCylindersRB3.setEnabled(false);
@@ -1071,7 +1071,7 @@ public class OrderFrame extends JFrame
 		numCylindersRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(numCylindersRB3.isSelected()==true) {
-					numCylindersSel = Integer.parseInt(numCylindersRB3.getText());
+					setNumCylindersSel(Integer.parseInt(numCylindersRB3.getText()));
 					System.out.println("Selected Cylinders: "+numCylindersRB3.getText());
 					numCylindersRB1.setEnabled(false);
 					numCylindersRB2.setEnabled(false);
@@ -1084,7 +1084,7 @@ public class OrderFrame extends JFrame
 		cabMaterialRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(cabMaterialRB1.isSelected()==true) {
-					cabMaterialSel = cabMaterialRB1.getText();
+					setCabMaterialSel(cabMaterialRB1.getText());
 					System.out.println("Selected Material: "+cabMaterialRB1.getText());
 					cabMaterialRB2.setEnabled(false);
 				} else if(cabMaterialRB1.isSelected()==false) {
@@ -1094,7 +1094,7 @@ public class OrderFrame extends JFrame
 		cabMaterialRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(cabMaterialRB2.isSelected()==true) {
-					cabMaterialSel = cabMaterialRB2.getText();
+					setCabMaterialSel(cabMaterialRB2.getText());
 					System.out.println("Selected Material: "+cabMaterialRB2.getText());
 					cabMaterialRB1.setEnabled(false);
 				} else if(cabMaterialRB2.isSelected()==false) {
@@ -1105,7 +1105,7 @@ public class OrderFrame extends JFrame
 		transmissionRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(transmissionRB1.isSelected()==true) {
-					transmissionSel = transmissionRB1.getText();
+					setTransmissionSel(transmissionRB1.getText());
 					System.out.println("Selected Transmission: "+transmissionRB1.getText());
 					transmissionRB2.setEnabled(false);
 				} else if(transmissionRB1.isSelected()==false) {
@@ -1115,7 +1115,7 @@ public class OrderFrame extends JFrame
 		transmissionRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(transmissionRB2.isSelected()==true) {
-					transmissionSel = transmissionRB2.getText();
+					setTransmissionSel(transmissionRB2.getText());
 					System.out.println("Selected Transmission: "+transmissionRB2.getText());
 					transmissionRB1.setEnabled(false);
 				} else if(transmissionRB2.isSelected()==false) {
@@ -1126,7 +1126,7 @@ public class OrderFrame extends JFrame
 		tireSizeRB1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(tireSizeRB1.isSelected()==true) {
-					tireSizeSel = Double.parseDouble(tireSizeRB1.getText());
+					setTireSizeSel(Double.parseDouble(tireSizeRB1.getText()));
 					System.out.println("Selected Tire Size: "+tireSizeRB1.getText());
 					tireSizeRB2.setEnabled(false);
 					tireSizeRB3.setEnabled(false);
@@ -1142,7 +1142,7 @@ public class OrderFrame extends JFrame
 		tireSizeRB2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(tireSizeRB2.isSelected()==true) {
-					tireSizeSel = Double.parseDouble(tireSizeRB2.getText());
+					setTireSizeSel(Double.parseDouble(tireSizeRB2.getText()));
 					System.out.println("Selected Tire Size: "+tireSizeRB2.getText());
 					tireSizeRB1.setEnabled(false);
 					tireSizeRB3.setEnabled(false);
@@ -1158,7 +1158,7 @@ public class OrderFrame extends JFrame
 		tireSizeRB3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(tireSizeRB3.isSelected()==true) {
-					tireSizeSel = Double.parseDouble(tireSizeRB3.getText());
+					setTireSizeSel(Double.parseDouble(tireSizeRB3.getText()));
 					System.out.println("Selected Tire Size: "+tireSizeRB3.getText());
 					tireSizeRB1.setEnabled(false);
 					tireSizeRB2.setEnabled(false);
@@ -1174,7 +1174,7 @@ public class OrderFrame extends JFrame
 		tireSizeRB4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(tireSizeRB4.isSelected()==true) {
-					tireSizeSel = Double.parseDouble(tireSizeRB4.getText());
+					setTireSizeSel(Double.parseDouble(tireSizeRB4.getText()));
 					System.out.println("Selected Tire Size: "+tireSizeRB4.getText());
 					tireSizeRB1.setEnabled(false);
 					tireSizeRB2.setEnabled(false);
@@ -1190,7 +1190,7 @@ public class OrderFrame extends JFrame
 		tireSizeRB5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(tireSizeRB5.isSelected()==true) {
-					tireSizeSel = Double.parseDouble(tireSizeRB5.getText());
+					setTireSizeSel(Double.parseDouble(tireSizeRB5.getText()));
 					System.out.println("Selected Tire Size: "+tireSizeRB5.getText());
 					tireSizeRB1.setEnabled(false);
 					tireSizeRB2.setEnabled(false);
@@ -1230,5 +1230,77 @@ public class OrderFrame extends JFrame
 
 	public static void setEngineUpgradeSel(Boolean engineUpgradeSel) {
 		OrderFrame.engineUpgradeSel = engineUpgradeSel;
+	}
+
+	public static double getTireSizeSel() {
+		return tireSizeSel;
+	}
+
+	public static void setTireSizeSel(double tireSizeSel) {
+		OrderFrame.tireSizeSel = tireSizeSel;
+	}
+
+	public static String getTransmissionSel() {
+		return transmissionSel;
+	}
+
+	public static void setTransmissionSel(String transmissionSel) {
+		OrderFrame.transmissionSel = transmissionSel;
+	}
+
+	public static String getCabMaterialSel() {
+		return cabMaterialSel;
+	}
+
+	public static void setCabMaterialSel(String cabMaterialSel) {
+		OrderFrame.cabMaterialSel = cabMaterialSel;
+	}
+
+	public static int getNumCylindersSel() {
+		return numCylindersSel;
+	}
+
+	public static void setNumCylindersSel(int numCylindersSel) {
+		OrderFrame.numCylindersSel = numCylindersSel;
+	}
+
+	public static String getVehicleTypeSel() {
+		return vehicleTypeSel;
+	}
+
+	public static void setVehicleTypeSel(String vehicleTypeSel) {
+		OrderFrame.vehicleTypeSel = vehicleTypeSel;
+	}
+
+	public static String getColorSel() {
+		return colorSel;
+	}
+
+	public static void setColorSel(String colorSel) {
+		OrderFrame.colorSel = colorSel;
+	}
+
+	public static String getModelSel() {
+		return modelSel;
+	}
+
+	public static void setModelSel(String modelSel) {
+		OrderFrame.modelSel = modelSel;
+	}
+
+	public static String getDealerSel() {
+		return dealerSel;
+	}
+
+	public static void setDealerSel(String dealerSel) {
+		OrderFrame.dealerSel = dealerSel;
+	}
+
+	public static String getMakeSel() {
+		return makeSel;
+	}
+
+	public static void setMakeSel(String makeSel) {
+		OrderFrame.makeSel = makeSel;
 	}
 }
