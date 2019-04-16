@@ -22,7 +22,7 @@ public class CarClassTest {
         customCar.cabMaterial = "Leather";
         customCar.transmission = "Manual";
         customCar.tireSize = 22.0;
-        customCar.Price = 22000;
+        customCar.price = 22000;
     }
 
     @Test

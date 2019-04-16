@@ -31,7 +31,7 @@ public class CarOrderDirector {
         carOrderBuilder.AddBodyKitUpgrade();
         System.out.println("Adding Engine Upgrade...");
         carOrderBuilder.AddEngineUpgrade();
-        System.out.println("Setting Price...");
+        System.out.println("Setting price...");
         carOrderBuilder.SetPrice();
     }
 }

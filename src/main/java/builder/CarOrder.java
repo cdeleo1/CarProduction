@@ -15,7 +15,7 @@ public class CarOrder {
     public Boolean bodyKitUpgrade; // Optional
     public Boolean engineUpgrade; // Optional
 
-    public double Price; // Required
+    public double price; // Required
 
     public String getMake() {
         return this.make;
@@ -70,63 +70,63 @@ public class CarOrder {
     }
 
     public double getPrice() {
-        return this.Price;
+        return this.price;
     }
 
-    public void setMake(String Make) {
-        this.make = Make;
+    public void setMake(String make) {
+        this.make = make;
     }
 
-    public void setModel(String Model) {
-        this.model = Model;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public void setDealership(String Dealership) {
-        this.dealership = Dealership;
+    public void setDealership(String dealership) {
+        this.dealership = dealership;
     }
 
-    public void setColor(String Color) {
-        this.color = Color;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public void setVehicleType(String VehicleType) {
-        this.vehicleType = VehicleType;
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
     }
 
-    public void setNumCylinders(int NumCylinders) {
-        this.numCylinders = NumCylinders;
+    public void setNumCylinders(int numCylinders) {
+        this.numCylinders = numCylinders;
     }
 
-    public void setCabMaterial(String CabMaterial) {
-        this.cabMaterial = CabMaterial;
+    public void setCabMaterial(String cabMaterial) {
+        this.cabMaterial = cabMaterial;
     }
 
-    public void setTransmission(String Transmission) {
-        this.transmission = Transmission;
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
     }
 
     public void setTireSize(double TireSize) {
         this.tireSize = TireSize;
     }
 
-    public void setSpoilerUpgrade(Boolean SpoilerUpgrade) {
-        this.spoilerUpgrade = SpoilerUpgrade;
+    public void setSpoilerUpgrade(Boolean spoilerUpgrade) {
+        this.spoilerUpgrade = spoilerUpgrade;
     }
 
-    public void setMufflerUpgrade(Boolean MufflerUpgrade) {
-        this.mufflerUpgrade = MufflerUpgrade;
+    public void setMufflerUpgrade(Boolean mufflerUpgrade) {
+        this.mufflerUpgrade = mufflerUpgrade;
     }
 
-    public void setBodyKitUpgrade(Boolean BodyKitUpgrade) {
-        this.bodyKitUpgrade = BodyKitUpgrade;
+    public void setBodyKitUpgrade(Boolean bodyKitUpgrade) {
+        this.bodyKitUpgrade = bodyKitUpgrade;
     }
 
-    public void setEngineUpgrade(Boolean EngineUpgrade) {
-        this.engineUpgrade = EngineUpgrade;
+    public void setEngineUpgrade(Boolean engineUpgrade) {
+        this.engineUpgrade = engineUpgrade;
     }
 
-    public void setPrice(double Price) {
-        this.Price = Price;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override

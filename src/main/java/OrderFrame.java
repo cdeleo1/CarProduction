@@ -341,7 +341,7 @@ public class OrderFrame extends JFrame {
                 carOrderDirector.makeCar(customCarBuilder);
                 CarOrder customCar = customCarBuilder.GetCar();
                 System.out.println(customCar);
-                System.out.println("Price: " + customCar.Price);
+                System.out.println("price: " + customCar.price);
             }
         });
 

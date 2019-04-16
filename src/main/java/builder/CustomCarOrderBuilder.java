@@ -72,7 +72,7 @@ public class CustomCarOrderBuilder extends CarOrderBuilder {
 
     @Override
     public void SetPrice() {
-        carOrder.Price = 22000;
+        carOrder.price = 22000;
     }
 
     @Override
