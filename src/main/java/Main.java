@@ -2,37 +2,44 @@ package main.java;
 
 import main.java.builder.*;
 
-public class Main 
-{
+public class Main {
+	
+	// Very basic 2D array initialized as a basis for testing functionality
 	public static String[][] allDealersInventory = {{"Transit", "Mazda", "RX8", "25"},
 													{"Transit", "Mazda", "Miata", "10"},
-													{"Transit", "Honda", "Accord", "17"},
-													{"Transit", "Honda", "Civic", "12"}};
+													{"Union", "Honda", "Accord", "17"},
+													{"Union", "Honda", "Civic", "12"}};
+	
+	// Very basic 2D array initialized as a basis for testing functionality
+	public static String[][] componentPartData =   {{"Number of Cylinders", "4", "Honda", "Civic", "800", "true"},
+													{"Number of Cylinders", "6", "Honda", "Accord", "1000", "true"},
+													{"Number of Cylinders", "6", "Ford", "Mustang", "1500", "true"},
+													{"Number of Cylinders", "8", "Ford", "Mustang", "2000", "true"},
+													{"Transmission", "Manual", "Honda", "Accord", "1800", "true"}};
 
-	/** Main method */
+	/* Main method */
 	public static void main(String[] args) {
 		
-		String[][] mazdaDealerInventory = { {"Mazda", "RX8", "25"},
-								  			{"Mazda", "Miata", "17"}};
-		String[][] hondaDealerInventory = { {"Honda", "Accord", "25"},
-				  							{"Honda", "Civic", "12"}};
+	////////////////////////	BUILDER PATTERN		/////////////////////////////
 		
-		Dealership mazdaDealer = new Dealership.DealershipBuilder(
-				"Transit", "Mazda", 25, mazdaDealerInventory).build();
-		Dealership hondaDealer = new Dealership.DealershipBuilder(
-				"Union", "Honda", 30, hondaDealerInventory).build();
+		/////////////////////////////////////////////////////////////////////////
+		// Demonstrates the CustomCarOrderBuilder (a concrete builder class) that	/
+		// determines which dealership has the user-specified make/manufacturer /
+		// in its inventory (selected through a GUI).							/	
+		/////////////////////////////////////////////////////////////////////////
+		new OrderFrame();
 		
-		System.out.println(mazdaDealer);
-		System.out.println(hondaDealer);
-		
-		new OrderFrame();	// Opens a GUI for customers to place an order
-		
-		// Demonstration of the Builder Pattern
-		CarDirector carDirector = new CarDirector();
-		CarBuilder hondaSportsCarBuilder = new HondaSportsCarBuilder();
-		carDirector.MakeCar(hondaSportsCarBuilder);
-		Car sportsCar = hondaSportsCarBuilder.GetCar();
+		/////////////////////////////////////////////////////////////////////////
+		// Demonstrates the HondaSportsCarOrderBuilder (a concrete builder class) 	/
+		// that	displays the preset values in order to build a Honda Sports CarOrder	/
+		/////////////////////////////////////////////////////////////////////////
+		CarOrderDirector carOrderDirector = new CarOrderDirector();
+		CarOrderBuilder hondaSportsCarBuilder = new HondaSportsCarOrderBuilder();
+		carOrderDirector.MakeCar(hondaSportsCarBuilder);
+		CarOrder sportsCar = hondaSportsCarBuilder.GetCar();
 		System.out.println(sportsCar);
-		System.out.println();
-	}
-}
+		
+	////////////////////////////////////////////////////////////////////////////
+		
+	} /* End of main(String[] args) */
+} /* End of Main class */

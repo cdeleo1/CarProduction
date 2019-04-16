@@ -1,6 +1,6 @@
 package main.java.builder;
 
-public class Car 
+public class CarOrder 
 {
 	public String Make;				// Required
 	public String Model; 			// Required
@@ -51,7 +51,7 @@ public class Car
 	@Override
 	public String toString()
 	{
-		return "Dealership: "+this.Dealership+" | Car details: "+this.Make+" "+this.Model+" | Color: "+this.Color+
+		return "Dealership: "+this.Dealership+" | Car Order details: "+this.Make+" "+this.Model+" | Color: "+this.Color+
 				" | Classification: "+this.VehicleType+" | Engine: "+this.NumCylinders+
 				" | Transmission: "+this.Transmission+" | Interior: "+this.CabMaterial+
 				" | Tire size: "+this.TireSize+" | Spoiler upgrade: "+this.SpoilerUpgrade+

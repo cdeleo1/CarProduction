@@ -4,14 +4,11 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import main.java.builder.CarDirector;
-import main.java.builder.CarBuilder;
-import main.java.builder.Car;
-import main.java.builder.HondaSportsCarBuilder;
+import main.java.builder.*;
 
-public class Whitebox {
+public class CarClassTest {
 
-	Car customCar = new Car();
+	CarOrder customCar = new CarOrder();
 	
 	@Before
 	public void setUp() throws Exception {

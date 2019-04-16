@@ -5,20 +5,22 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
 
-import main.java.builder.Car;
-import main.java.builder.CarBuilder;
-import main.java.builder.CarDirector;
-import main.java.builder.HondaSportsCarBuilder;
-import main.java.builder.CustomCarBuilder;
+import main.java.builder.CarOrder;
+import main.java.builder.CarOrderBuilder;
+import main.java.builder.CarOrderDirector;
+import main.java.builder.HondaSportsCarOrderBuilder;
+import main.java.builder.CustomCarOrderBuilder;
 
 public class OrderFrame extends JFrame
 {
 	static int MAIN_FRAME_WIDTH = 800;
 	static int MAIN_FRAME_HEIGHT = 600;
+	
 	public static String dealerSel;
 	public static String makeSel;
 	public static String modelSel;
@@ -33,23 +35,34 @@ public class OrderFrame extends JFrame
 	public static Boolean bodyKitUpgradeSel;
 	public static Boolean engineUpgradeSel;
 	
-	public OrderFrame()
-	{
-		JFrame tabFrame = new JFrame();
-
-		JTabbedPane tabbedPane = new JTabbedPane();
-					
-		JPanel homePanel = new JPanel();
-		JPanel modelPanel = new JPanel();
-		JPanel colorPanel = new JPanel();
-		JPanel enginePanel = new JPanel();
-		JPanel cabMaterialPanel = new JPanel();
-		JPanel transmissionPanel = new JPanel();
-		JPanel tireSizePanel = new JPanel();
-		JPanel optionalUpgradesPanel = new JPanel();
+	// Initialize the GUI components used to place car orders
+	public OrderFrame() {
 		
-		JButton applyButton = new JButton("Apply");
-		JButton purchaseButton = new JButton("Purchase");
+		JFrame tabFrame = new JFrame();							// MAIN FRAME
+
+		JTabbedPane tabbedPane = new JTabbedPane();				// TABBED PANE
+					
+		JPanel homePanel = new JPanel();						// HOME (MAKE/DEALERSHIP/APPLY/PURCHASE)
+		JPanel modelPanel = new JPanel();						// MODEL
+		JPanel colorPanel = new JPanel();						// COLOR
+		JPanel enginePanel = new JPanel();						// ENGINE (VEHICLE TYPE/NUM CYLINDERS)
+		JPanel cabMaterialPanel = new JPanel();					// INTERIOR
+		JPanel transmissionPanel = new JPanel();				// TRANSMISSION
+		JPanel tireSizePanel = new JPanel();					// TIRE SIZE
+		JPanel optionalUpgradesPanel = new JPanel();			// OPTIONAL UPGRADES (SPOILER/MUFFLER/BODY KIT/ENGINE)
+		
+		JLabel makeLabel = new JLabel("Make/Manufacturer: ");
+		JLabel dealershipLabel = new JLabel("Dealership: ");
+		JLabel modelLabel = new JLabel("Model: ");
+		JLabel colorLabel = new JLabel("Color: ");
+		JLabel vehicleTypeLabel = new JLabel("Fuel source: ");
+		JLabel numCylindersLabel = new JLabel("Number of cylinders: ");
+		JLabel cabMaterialLabel = new JLabel("Interior material: ");
+		JLabel transmissionLabel = new JLabel("Transmission: ");
+		JLabel tireSizeLabel = new JLabel("Tire size (inches): ");
+		
+		JButton applyButton = new JButton("Apply");				// APPLY (HOME TAB - CALCULATES PRICE)
+		JButton purchaseButton = new JButton("Purchase");		// PURCHASE (HOME TAB - SENDS ORDER TO DEALERSHIP)
 		
 		JRadioButton dealerRB1 = new JRadioButton("Transit");
 		JRadioButton dealerRB2 = new JRadioButton("Union");
@@ -96,7 +109,7 @@ public class OrderFrame extends JFrame
 		JRadioButton tireSizeRB5 = new JRadioButton("22.0");
 		
 		tabFrame.add(tabbedPane);
-		tabFrame.setTitle("Car Shopper");
+		tabFrame.setTitle("CarOrder Shopper");
 		tabFrame.setSize(MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		tabFrame.setLayout(null);
 		tabFrame.setLocationRelativeTo(null); // Center the frame
@@ -104,13 +117,13 @@ public class OrderFrame extends JFrame
 		tabFrame.setVisible(true);
 		
 		tabbedPane.add("Home", homePanel);
-		tabbedPane.add("Model", modelPanel);
+		/*tabbedPane.add("Model", modelPanel);
 		tabbedPane.add("Color", colorPanel);
 		tabbedPane.add("Engine", enginePanel);
 		tabbedPane.add("Interior", cabMaterialPanel);
 		tabbedPane.add("Transmission", transmissionPanel);
 		tabbedPane.add("Tires", tireSizePanel);
-		tabbedPane.add("Optional Upgrades", optionalUpgradesPanel);
+		tabbedPane.add("Optional Upgrades", optionalUpgradesPanel);*/
 		
 		tabbedPane.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		tabbedPane.setVisible(true);
@@ -118,6 +131,10 @@ public class OrderFrame extends JFrame
 		// HOME PANEL SETUP //
 		homePanel.add(applyButton);
 		homePanel.add(purchaseButton);
+		
+		homePanel.add(makeLabel);
+		homePanel.add(dealershipLabel);
+		homePanel.add(modelLabel);
 		
 		homePanel.add(makeRB1);
 		homePanel.add(makeRB2);
@@ -131,26 +148,76 @@ public class OrderFrame extends JFrame
 		homePanel.add(dealerRB4);
 		homePanel.add(dealerRB5);
 		
+		homePanel.add(modelRB1);
+		homePanel.add(modelRB2);
+		homePanel.add(modelRB3);
+		homePanel.add(modelRB4);
+		homePanel.add(modelRB5);
+		
+		homePanel.add(colorLabel);
+		
+		homePanel.add(colorRB1);
+		homePanel.add(colorRB2);
+		homePanel.add(colorRB3);
+		homePanel.add(colorRB4);
+		homePanel.add(colorRB5);
+		
+		homePanel.add(vehicleTypeLabel);
+		
+		homePanel.add(vehicleTypeRB1);
+		homePanel.add(vehicleTypeRB2);
+		homePanel.add(vehicleTypeRB3);
+		
+		homePanel.add(numCylindersLabel);
+		
+		homePanel.add(numCylindersRB1);
+		homePanel.add(numCylindersRB2);
+		homePanel.add(numCylindersRB3);
+		
+		homePanel.add(cabMaterialLabel);
+		
+		homePanel.add(cabMaterialRB1);
+		homePanel.add(cabMaterialRB2);
+		
+		homePanel.add(transmissionLabel);
+		
+		homePanel.add(transmissionRB1);
+		homePanel.add(transmissionRB2);
+		
+		homePanel.add(tireSizeLabel);
+		
+		homePanel.add(tireSizeRB1);
+		homePanel.add(tireSizeRB2);
+		homePanel.add(tireSizeRB3);
+		homePanel.add(tireSizeRB4);
+		homePanel.add(tireSizeRB5);
+		
 		homePanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		homePanel.setLayout(null);
 		homePanel.setVisible(true);
 		
-		makeRB1.setBounds(25, 25, 100, 30);
-		makeRB2.setBounds(25, 50, 100, 30);
-		makeRB3.setBounds(25, 75, 100, 30);
-		makeRB4.setBounds(25, 100, 100, 30);
-		makeRB5.setBounds(25, 125, 100, 30);
+		makeLabel.setBounds(5, 5, 150, 30);
 		
-		dealerRB1.setBounds(150, 25, 100, 30);
-		dealerRB2.setBounds(150, 50, 100, 30);
-		dealerRB3.setBounds(150, 75, 100, 30);
-		dealerRB4.setBounds(150, 100, 100, 30);
-		dealerRB5.setBounds(150, 125, 100, 30);
+		makeRB1.setBounds(5, 25, 150, 30);
+		makeRB2.setBounds(5, 50, 150, 30);
+		makeRB3.setBounds(5, 75, 150, 30);
+		makeRB4.setBounds(5, 100, 150, 30);
+		makeRB5.setBounds(5, 125, 150, 30);
+		
+		dealershipLabel.setBounds(155, 5, 150, 30);
+		
+		dealerRB1.setBounds(155, 25, 150, 30);
+		dealerRB2.setBounds(155, 50, 150, 30);
+		dealerRB3.setBounds(155, 75, 150, 30);
+		dealerRB4.setBounds(155, 100, 150, 30);
+		dealerRB5.setBounds(155, 125, 150, 30);
 		
 		applyButton.setBounds(550, 500, 100, 30);
 		purchaseButton.setBounds(650, 500, 100, 30);
 		
 		// MODEL PANEL SETUP //
+		/*modelPanel.add(modelLabel);
+		
 		modelPanel.add(modelRB1);
 		modelPanel.add(modelRB2);
 		modelPanel.add(modelRB3);
@@ -159,15 +226,19 @@ public class OrderFrame extends JFrame
 		
 		modelPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		modelPanel.setLayout(null);
-		modelPanel.setVisible(true);
+		modelPanel.setVisible(true);*/
 		
-		modelRB1.setBounds(25, 25, 100, 30);
-		modelRB2.setBounds(25, 50, 100, 30);
-		modelRB3.setBounds(25, 75, 100, 30);
-		modelRB4.setBounds(25, 100, 100, 30);
-		modelRB5.setBounds(25, 125, 100, 30);
+		modelLabel.setBounds(305, 5, 150, 30);
+		
+		modelRB1.setBounds(305, 25, 150, 30);
+		modelRB2.setBounds(305, 50, 150, 30);
+		modelRB3.setBounds(305, 75, 150, 30);
+		modelRB4.setBounds(305, 100, 150, 30);
+		modelRB5.setBounds(305, 125, 150, 30);
 		
 		// COLOR PANEL SETUP //
+		/*colorPanel.add(colorLabel);
+		
 		colorPanel.add(colorRB1);
 		colorPanel.add(colorRB2);
 		colorPanel.add(colorRB3);
@@ -176,18 +247,24 @@ public class OrderFrame extends JFrame
 		
 		colorPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		colorPanel.setLayout(null);
-		colorPanel.setVisible(true);
+		colorPanel.setVisible(true);*/
 		
-		colorRB1.setBounds(25, 25, 100, 30);
-		colorRB2.setBounds(25, 50, 100, 30);
-		colorRB3.setBounds(25, 75, 100, 30);
-		colorRB4.setBounds(25, 100, 100, 30);
-		colorRB5.setBounds(25, 125, 100, 30);
+		colorLabel.setBounds(455, 5, 150, 30);
+		
+		colorRB1.setBounds(455, 25, 150, 30);
+		colorRB2.setBounds(455, 50, 150, 30);
+		colorRB3.setBounds(455, 75, 150, 30);
+		colorRB4.setBounds(455, 100, 150, 30);
+		colorRB5.setBounds(455, 125, 150, 30);
 		
 		// ENGINE PANEL SETUP //
+		/*enginePanel.add(vehicleTypeLabel);
+		
 		enginePanel.add(vehicleTypeRB1);
 		enginePanel.add(vehicleTypeRB2);
 		enginePanel.add(vehicleTypeRB3);
+		
+		enginePanel.add(numCylindersLabel);
 		
 		enginePanel.add(numCylindersRB1);
 		enginePanel.add(numCylindersRB2);
@@ -195,39 +272,53 @@ public class OrderFrame extends JFrame
 		
 		enginePanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		enginePanel.setLayout(null);
-		enginePanel.setVisible(true);
+		enginePanel.setVisible(true);*/
 		
-		vehicleTypeRB1.setBounds(25, 25, 100, 30);
-		vehicleTypeRB2.setBounds(25, 50, 100, 30);
-		vehicleTypeRB3.setBounds(25, 75, 100, 30);
+		vehicleTypeLabel.setBounds(5, 225, 150, 30);
 		
-		numCylindersRB1.setBounds(150, 25, 100, 30);
-		numCylindersRB2.setBounds(150, 50, 100, 30);
-		numCylindersRB3.setBounds(150, 75, 100, 30);
+		vehicleTypeRB1.setBounds(5, 245, 150, 30);
+		vehicleTypeRB2.setBounds(5, 270, 150, 30);
+		vehicleTypeRB3.setBounds(5, 295, 150, 30);
+		
+		numCylindersLabel.setBounds(155, 225, 150, 30);
+		
+		numCylindersRB1.setBounds(155, 245, 150, 30);
+		numCylindersRB2.setBounds(155, 270, 150, 30);
+		numCylindersRB3.setBounds(155, 295, 150, 30);
 		
 		// CAB MATERIAL PANEL SETUP //
+		/*cabMaterialPanel.add(cabMaterialLabel);
+		
 		cabMaterialPanel.add(cabMaterialRB1);
 		cabMaterialPanel.add(cabMaterialRB2);
 		
 		cabMaterialPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		cabMaterialPanel.setLayout(null);
-		cabMaterialPanel.setVisible(true);
+		cabMaterialPanel.setVisible(true);*/
 		
-		cabMaterialRB1.setBounds(25, 25, 100, 30);
-		cabMaterialRB2.setBounds(25, 50, 100, 30);
+		cabMaterialLabel.setBounds(305, 225, 150, 30);
+		
+		cabMaterialRB1.setBounds(305, 245, 150, 30);
+		cabMaterialRB2.setBounds(305, 270, 150, 30);
 		
 		// TRANSMISSION PANEL SETUP //
+		/*transmissionPanel.add(transmissionLabel);
+		
 		transmissionPanel.add(transmissionRB1);
 		transmissionPanel.add(transmissionRB2);
 		
 		transmissionPanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		transmissionPanel.setLayout(null);
-		transmissionPanel.setVisible(true);
+		transmissionPanel.setVisible(true);*/
 		
-		transmissionRB1.setBounds(25, 25, 100, 30);
-		transmissionRB2.setBounds(25, 50, 100, 30);
+		transmissionLabel.setBounds(455, 225, 150, 30);
+		
+		transmissionRB1.setBounds(455, 245, 150, 30);
+		transmissionRB2.setBounds(455, 270, 150, 30);
 		
 		// TIRE SIZE PANEL SETUP //
+		/*tireSizePanel.add(tireSizeLabel);
+		
 		tireSizePanel.add(tireSizeRB1);
 		tireSizePanel.add(tireSizeRB2);
 		tireSizePanel.add(tireSizeRB3);
@@ -236,23 +327,25 @@ public class OrderFrame extends JFrame
 		
 		tireSizePanel.setBounds(0, 0, MAIN_FRAME_WIDTH, MAIN_FRAME_HEIGHT);
 		tireSizePanel.setLayout(null);
-		tireSizePanel.setVisible(true);
+		tireSizePanel.setVisible(true);*/
 		
-		tireSizeRB1.setBounds(25, 25, 100, 30);
-		tireSizeRB2.setBounds(25, 50, 100, 30);
-		tireSizeRB3.setBounds(25, 75, 100, 30);
-		tireSizeRB4.setBounds(25, 100, 100, 30);
-		tireSizeRB5.setBounds(25, 125, 100, 30);
+		tireSizeLabel.setBounds(5, 370, 150, 30);
+		
+		tireSizeRB1.setBounds(5, 390, 150, 30);
+		tireSizeRB2.setBounds(5, 415, 150, 30);
+		tireSizeRB3.setBounds(5, 440, 150, 30);
+		tireSizeRB4.setBounds(5, 465, 150, 30);
+		tireSizeRB5.setBounds(5, 490, 150, 30);
 		
 		//////////////// 	APPLY BUTTON ACTION 	/////////////////
 		applyButton.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				CarDirector carDirector = new CarDirector();
-				CarBuilder customCarBuilder = new CustomCarBuilder();
-				carDirector.MakeCar(customCarBuilder);
-				Car customCar = customCarBuilder.GetCar();
+				CarOrderDirector carOrderDirector = new CarOrderDirector();
+				CarOrderBuilder customCarBuilder = new CustomCarOrderBuilder();
+				carOrderDirector.MakeCar(customCarBuilder);
+				CarOrder customCar = customCarBuilder.GetCar();
 			    System.out.println(customCar);
 				System.out.println("Price: "+customCar.Price);
 			}

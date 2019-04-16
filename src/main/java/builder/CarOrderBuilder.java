@@ -1,9 +1,7 @@
 package main.java.builder;
 
-public abstract class CarBuilder 
+public abstract class CarOrderBuilder 
 {
-	private Car car = new Car();
-	
 	public abstract void AddMake();
 	public abstract void AddDealership();
 	public abstract void AddModel();
@@ -19,5 +17,5 @@ public abstract class CarBuilder
 	public abstract void AddEngineUpgrade();
 	
 	public abstract void SetPrice();
-	public abstract Car GetCar();
+	public abstract CarOrder GetCar();
 }
