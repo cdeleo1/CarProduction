@@ -1,12 +1,10 @@
 package main.java.builder;
 
-public class CarOrderDirector 
-{
-	public void makeCar(CarOrderBuilder carOrderBuilder)
-	{
+public class CarOrderDirector {
+	public void makeCar(CarOrderBuilder carOrderBuilder) {
 		System.out.println("BEGIN CAR ORDER BUILDER: ");
 		System.out.println("------------------------");
-		
+
 		System.out.println("Adding Make...");
 		carOrderBuilder.AddMake();
 		System.out.println("Adding Dealership...");
