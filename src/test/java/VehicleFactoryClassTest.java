@@ -2,12 +2,12 @@ package test.java;
 
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import main.java.factory.MazdaVehicleFactory;
 import main.java.factory.Vehicle;
 import main.java.factory.VehicleFactory;
+
+import org.junit.Before;
+import org.junit.Test;
 
 public class VehicleFactoryClassTest {
 

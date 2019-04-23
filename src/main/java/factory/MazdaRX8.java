@@ -1,3 +1,8 @@
+/**
+ * Factory Design Pattern
+ * SER 316: Assignment 5b
+ */
+
 package main.java.factory;
 
 public class MazdaRX8 extends Vehicle {
@@ -29,5 +34,4 @@ public class MazdaRX8 extends Vehicle {
     public void setBasePrice() {
         this.basePrice = basePrice;
     }
-    
 }

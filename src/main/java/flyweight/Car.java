@@ -2,17 +2,12 @@
  * Flyweight Design Pattern
  * SER 316: Assignment 5b
  */
+
 package main.java.flyweight;
 
-import main.java.factory.Vehicle;
-
-/**
- * @author Cristi DeLeo
- *
- */
 public abstract class Car {
     
-    public String type;     // Type of vehicle (sports car, sedan, truck, Truck, etc.)
+    public String type;     // Type of vehicle
     public int speed;       // Speed rating
     public int luxury;      // Luxury rating
     public int safety;      // Safety rating

@@ -7,8 +7,8 @@ import main.java.builder.HondaSportsCarOrderBuilder;
 import main.java.factory.MazdaVehicleFactory;
 import main.java.factory.Vehicle;
 import main.java.factory.VehicleFactory;
-import main.java.flyweight.CarTypeFactory;
 import main.java.flyweight.CarType;
+import main.java.flyweight.CarTypeFactory;
 
 public class Main {
 

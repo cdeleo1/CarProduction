@@ -2,15 +2,9 @@
  * Factory Design Pattern
  * SER 316: Assignment 5b
  */
+
 package main.java.factory;
 
-import main.java.flyweight.Car;
-import main.java.flyweight.CarType;
-
-/**
- * @author Cristi DeLeo
- *
- */
 public abstract class Vehicle {
     
     public String model;        // Model

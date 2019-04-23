@@ -2,11 +2,11 @@ package test.java;
 
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import main.java.flyweight.CarType;
 import main.java.flyweight.CarTypeFactory;
+
+import org.junit.Before;
+import org.junit.Test;
 
 public class CarTypeClassTest {
     
