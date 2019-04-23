@@ -25,22 +25,22 @@ public class CarFactory {
             
             switch(type) {
             case "Sport":
-                car = new SportCar();
+                car = new Sport();
                 car.type = "Sport";
                 car.speed = 100;
                 car.luxury = 60;
                 car.safety = 75;
                 break;
-            case "Luxury":
-                car = new LuxuryCar();
-                car.type = "Luxury";
+            case "Hybrid":
+                car = new Hybrid();
+                car.type = "Hybrid";
                 car.speed = 75;
                 car.luxury = 100;
-                car.safety = 90;
+                car.safety = 85;
                 break;
-            case "SUV":
-                car = new SuvCar();
-                car.type = "SUV";
+            case "Truck":
+                car = new Truck();
+                car.type = "Truck";
                 car.speed = 60;
                 car.luxury = 75;
                 car.safety = 100;

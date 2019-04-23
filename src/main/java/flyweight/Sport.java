@@ -1,9 +1,18 @@
+/**
+ * 
+ */
 package main.java.flyweight;
 
-public class SuvCar extends Car {
+import main.java.factory.Vehicle;
+
+/**
+ * @author Office
+ *
+ */
+public class Sport extends Car {
     @Override
     public void assignCarRatings() {
-        System.out.println("Assigning vehicle ratings to an "+type+" ...");
+        System.out.println("Assigning vehicle ratings to a "+type+" Car ...");
         System.out.println("Speed: "+speed);
         System.out.println("Luxury: "+luxury);
         System.out.println("Safety: "+safety);

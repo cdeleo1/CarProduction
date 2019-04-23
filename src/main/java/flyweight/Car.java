@@ -11,7 +11,7 @@ import main.java.factory.Vehicle;
  */
 public abstract class Car {
     
-    public String type;     // Type of vehicle (sports car, sedan, truck, SuvCar, etc.)
+    public String type;     // Type of vehicle (sports car, sedan, truck, Truck, etc.)
     public int speed;       // Speed rating
     public int luxury;      // Luxury rating
     public int safety;      // Safety rating

@@ -59,17 +59,17 @@ public class Main {
         //////////////////////////////////////////////////////////////////////////
         CarFactory factory = new CarFactory();
         
-        CarType sportsCar = new CarType();
-        sportsCar.carData = factory.getCar("Sport");
-        sportsCar.carData.assignCarRatings();
+        CarType sport = new CarType();
+        sport.carData = factory.getCar("Sport");
+        sport.carData.assignCarRatings();
         
-        CarType luxuryCar = new CarType();
-        luxuryCar.carData = factory.getCar("Luxury");
-        luxuryCar.carData.assignCarRatings();
+        CarType hybrid = new CarType();
+        hybrid.carData = factory.getCar("Hybrid");
+        hybrid.carData.assignCarRatings();
         
-        CarType suvCar = new CarType();
-        suvCar.carData = factory.getCar("SUV");
-        suvCar.carData.assignCarRatings();
+        CarType truck = new CarType();
+        truck.carData = factory.getCar("Truck");
+        truck.carData.assignCarRatings();
         
 
     } /* End of main(String[] args) */
