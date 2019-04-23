@@ -3,7 +3,7 @@ package main.java.factory;
 public class Mazda6 extends Vehicle {
     
     public String model = "6";          // Model
-    public String type = "hybrid";      // Type of car (sport, hybrid, or truck)
+    public String type = "Hybrid";      // Type of car (sport, hybrid, or truck)
     public double basePrice = 17500;    // Price of car without any customizations
     
     public String getModel() {

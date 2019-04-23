@@ -3,7 +3,7 @@ package main.java.factory;
 public class MazdaRX8 extends Vehicle {
     
     public String model = "rx8";        // Model
-    public String type = "sport";       // Type of car (sport, hybrid, or truck)
+    public String type = "Sport";       // Type of car (sport, hybrid, or truck)
     public double basePrice = 20000;    // Price of car without any customizations
     
     public String getModel() {

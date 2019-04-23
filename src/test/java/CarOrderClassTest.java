@@ -7,9 +7,7 @@ import main.java.builder.CarOrder;
 import org.junit.Before;
 import org.junit.Test;
 
-
-
-public class CarClassTest {
+public class CarOrderClassTest {
 
     CarOrder customCar = new CarOrder();
 
