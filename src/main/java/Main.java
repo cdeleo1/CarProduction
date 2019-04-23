@@ -4,6 +4,9 @@ import main.java.builder.CarOrder;
 import main.java.builder.CarOrderBuilder;
 import main.java.builder.CarOrderDirector;
 import main.java.builder.HondaSportsCarOrderBuilder;
+import main.java.factory.MazdaVehicleFactory;
+import main.java.factory.Vehicle;
+import main.java.factory.VehicleFactory;
 import main.java.flyweight.CarTypeFactory;
 import main.java.flyweight.CarType;
 
@@ -70,6 +73,16 @@ public class Main {
         truck.carData = factory.getCar("Truck");
         truck.carData.assignCarRatings();
         
+        //////////////////////// FACTORY PATTERN /////////////////////////////////
+        // Demonstrates the Factory classes that assign values to Vehicle objects
+        // based on model (Civic, Accord, RX8, or 6).
+        //////////////////////////////////////////////////////////////////////////
+        VehicleFactory mazda = new MazdaVehicleFactory();
+        Vehicle rx8 = mazda.createVehicle("rx8");
+        System.out.println("Creating a Mazda " + rx8.getModel());
+        
+        Vehicle mazda6 = mazda.createVehicle("6");
+        System.out.println("Creating a Mazda " + mazda6.getModel());
 
     } /* End of main(String[] args) */
 } /* End of Main class */
