@@ -7,10 +7,6 @@ package main.java.factory;
 
 public class Mazda6 extends Vehicle {
     
-    public String model = "6";          // Model
-    public String type = "Hybrid";      // Type of car (sport, hybrid, or truck)
-    public double basePrice = 17500;    // Price of car without any customizations
-    
     public String getModel() {
         return this.model;
     }
@@ -24,14 +20,14 @@ public class Mazda6 extends Vehicle {
     }
     
     public void setModel() {
-        this.model = model;
+        this.model = "6";
     }
     
     public void setType() {
-        this.type = type;
+        this.type = "Hybrid";
     }
     
     public void setBasePrice() {
-        this.basePrice = basePrice;
+        this.basePrice = 17500;
     }
 }

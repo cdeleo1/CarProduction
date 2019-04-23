@@ -7,10 +7,6 @@ package main.java.factory;
 
 public class HondaCivic extends Vehicle {
     
-    public String model = "civic";      // Model
-    public String type = "sport";       // Type of car (sport, hybrid, or truck)
-    public double basePrice = 18000;    // Price of car without any customizations
-    
     public String getModel() {
         return this.model;
     }
@@ -24,14 +20,14 @@ public class HondaCivic extends Vehicle {
     }
     
     public void setModel() {
-        this.model = model;
+        this.model = "civic";
     }
     
     public void setType() {
-        this.type = type;
+        this.type = "sport";
     }
     
     public void setBasePrice() {
-        this.basePrice = basePrice;
+        this.basePrice = 18000;
     }
 }
