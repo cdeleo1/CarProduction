@@ -17,7 +17,12 @@ public class VehicleFactoryClassTest {
 
     @Before
     public void setUp() throws Exception {
-        
+        mazdaRX8.setModel();
+        mazdaRX8.setType();
+        mazdaRX8.setBasePrice();
+        mazda6.setModel();
+        mazda6.setType();
+        mazda6.setBasePrice();
     }
 
     @Test
