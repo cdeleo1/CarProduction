@@ -48,5 +48,5 @@ public abstract class Car {
         this.safety = safety;
     }
     
-    public abstract void assignCarRatings(CarType carType);
+    public abstract void assignCarRatings();
 }

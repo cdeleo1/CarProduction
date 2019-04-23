@@ -11,7 +11,7 @@ import main.java.factory.Vehicle;
  */
 public class SportCar extends Car {
     @Override
-    public void assignCarRatings(CarType carType) {
+    public void assignCarRatings() {
         System.out.println("Assigning vehicle ratings to a "+type+" Car...");
         System.out.println("Speed: "+speed);
         System.out.println("Luxury: "+luxury);

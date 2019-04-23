@@ -37,8 +37,6 @@ public class Main {
     public static void main(String[] args) {
 
         //////////////////////// BUILDER PATTERN /////////////////////////////////
-
-        //////////////////////////////////////////////////////////////////////////
         // Demonstrates the CustomCarOrderBuilder (a concrete builder class) that
         // determines which dealership has the user-specified make/manufacturer 
         // in its inventory (selected through a GUI).
@@ -56,8 +54,6 @@ public class Main {
         System.out.println(sportsCarOrder);
 
         //////////////////////// FLYWEIGHT PATTERN ///////////////////////////////
-
-        //////////////////////////////////////////////////////////////////////////
         // Demonstrates the Flyweight classes that assign values to Car objects
         // based on type (Sports, Luxury, or SUV).
         //////////////////////////////////////////////////////////////////////////
@@ -65,15 +61,16 @@ public class Main {
         
         CarType sportsCar = new CarType();
         sportsCar.carData = factory.getCar("Sport");
-        sportsCar.carData.assignCarRatings(sportsCar);
+        sportsCar.carData.assignCarRatings();
         
         CarType luxuryCar = new CarType();
-        sportsCar.carData = factory.getCar("Luxury");
-        sportsCar.carData.assignCarRatings(sportsCar);
+        luxuryCar.carData = factory.getCar("Luxury");
+        luxuryCar.carData.assignCarRatings();
         
         CarType suvCar = new CarType();
-        sportsCar.carData = factory.getCar("SUV");
-        sportsCar.carData.assignCarRatings(sportsCar);
+        suvCar.carData = factory.getCar("SUV");
+        suvCar.carData.assignCarRatings();
+        
 
     } /* End of main(String[] args) */
 } /* End of Main class */
