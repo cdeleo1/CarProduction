@@ -1,21 +1,23 @@
 package main.java.builder;
 
 public class CarOrder {
-    public String make; // Required
-    public String model; // Required
-    public String dealership; // Required
-    public String color; // Required
-    public String vehicleType; // Required
-    public int numCylinders; // Required
-    public String cabMaterial; // Required
-    public String transmission; // Required
-    public double tireSize; // Required
-    public Boolean spoilerUpgrade; // Optional
-    public Boolean mufflerUpgrade; // Optional
-    public Boolean bodyKitUpgrade; // Optional
-    public Boolean engineUpgrade; // Optional
+    
+    public String make;             // Required
+    public String model;            // Required
+    public String dealership;       // Required
+    public String color;            // Required
+    public String vehicleType;      // Required
+    public int numCylinders;        // Required
+    public String cabMaterial;      // Required
+    public String transmission;     // Required
+    public double tireSize;         // Required
+    
+    public Boolean spoilerUpgrade;  // Optional
+    public Boolean mufflerUpgrade;  // Optional
+    public Boolean bodyKitUpgrade;  // Optional
+    public Boolean engineUpgrade;   // Optional
 
-    public double price; // Required
+    public double price;            // Required
 
     public String getMake() {
         return this.make;
