@@ -7,6 +7,8 @@ package main.java.factory;
 
 public class MazdaRX8 extends Vehicle {
     
+    public String model = "rx8";
+    
     public String getModel() {
         return this.model;
     }
