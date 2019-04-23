@@ -22,7 +22,7 @@ public class HondaVehicleFactory extends VehicleFactory {
                     System.out.println("Options are: Civic or Accord");
                     e.printStackTrace();
                 }
-            }
+        }
         return null;
     }
 }

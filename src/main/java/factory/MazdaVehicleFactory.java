@@ -22,7 +22,7 @@ public class MazdaVehicleFactory extends VehicleFactory {
                     System.out.println("Options are: RX8 or 6");
                     e.printStackTrace();
                 }
-            }
+        }
         return null;
     }
 }
