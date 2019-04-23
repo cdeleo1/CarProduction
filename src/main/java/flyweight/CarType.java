@@ -7,7 +7,5 @@ package main.java.flyweight;
 
 public class CarType {
     
-    public Car carData;
-    public String type;
-    
+    public Car carData;    
 }

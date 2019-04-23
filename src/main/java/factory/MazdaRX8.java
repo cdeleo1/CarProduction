@@ -7,7 +7,11 @@ package main.java.factory;
 
 public class MazdaRX8 extends Vehicle {
     
-    public String model = "rx8";
+    public MazdaRX8() {
+        model = "rx8";
+        type = "Sport";
+        basePrice = 20000;
+    }
     
     public String getModel() {
         return this.model;
@@ -21,15 +25,15 @@ public class MazdaRX8 extends Vehicle {
         return this.basePrice;
     }
     
-    public void setModel() {
-        this.model = "rx8";
+    public void setModel(String model) {
+        this.model = model;
     }
     
-    public void setType() {
-        this.type = "Sport";
+    public void setType(String type) {
+        this.type = type;
     }
     
-    public void setBasePrice() {
-        this.basePrice = 20000;
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
     }
 }

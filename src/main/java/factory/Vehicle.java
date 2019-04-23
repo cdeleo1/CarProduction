@@ -23,15 +23,15 @@ public abstract class Vehicle {
         return this.basePrice;
     }
     
-    public void setModel() {
+    public void setModel(String model) {
         this.model = model;
     }
     
-    public void setType() {
+    public void setType(String type) {
         this.type = type;
     }
     
-    public void setBasePrice() {
+    public void setBasePrice(double basePrice) {
         this.basePrice = basePrice;
     }
 }

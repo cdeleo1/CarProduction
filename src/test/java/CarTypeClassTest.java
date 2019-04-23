@@ -16,7 +16,6 @@ public class CarTypeClassTest {
     @Before
     public void setUp() throws Exception {
         car.carData = factory.getCar("Sport");
-        car.type = "Sport";
     }
 
     @Test

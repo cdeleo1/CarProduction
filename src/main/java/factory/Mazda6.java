@@ -7,6 +7,12 @@ package main.java.factory;
 
 public class Mazda6 extends Vehicle {
     
+    public Mazda6() {
+        model = "6";
+        type = "Hybrid";
+        basePrice = 17500;
+    }
+    
     public String getModel() {
         return this.model;
     }
