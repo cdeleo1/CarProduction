@@ -28,21 +28,5 @@ public abstract class Car {
         return this.safety;
     }
     
-    public void setType() {
-        this.type = type;
-    }
-    
-    public void setSpeed() {
-        this.speed = speed;
-    }
-    
-    public void setLuxury() {
-        this.luxury = luxury;
-    }
-    
-    public void setSafety() {
-        this.safety = safety;
-    }
-    
     public abstract void assignCarRatings();
 }

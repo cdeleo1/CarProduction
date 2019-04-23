@@ -22,16 +22,4 @@ public abstract class Vehicle {
     public double getBasePrice() {
         return this.basePrice;
     }
-    
-    public void setModel() {
-        this.model = model;
-    }
-    
-    public void setType() {
-        this.type = type;
-    }
-    
-    public void setBasePrice() {
-        this.basePrice = basePrice;
-    }
 }
