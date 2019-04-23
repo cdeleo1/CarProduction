@@ -5,15 +5,12 @@
 package main.java.flyweight;
 
 import java.util.HashMap;
-import java.util.Hashtable;
-
-import main.java.factory.Vehicle;
 
 /**
  * @author Cristi DeLeo
  *
  */
-public class CarFactory {
+public class CarTypeFactory {
 
     private HashMap<String, Car> cars = new HashMap<>();
     

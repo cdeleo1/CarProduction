@@ -8,6 +8,8 @@ package main.java.factory;
  * @author Cristi DeLeo
  *
  */
-public abstract class Vehicle {
+public abstract class VehicleFactory {
+    
+    public abstract Vehicle createVehicle(String model);
 
 }

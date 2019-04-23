@@ -1,12 +1,11 @@
 /**
- * 
+ * Flyweight Design Pattern
+ * SER 316: Assignment 5b
  */
 package main.java.flyweight;
 
-import main.java.factory.Vehicle;
-
 /**
- * @author Office
+ * @author Cristi DeLeo
  *
  */
 public class Sport extends Car {

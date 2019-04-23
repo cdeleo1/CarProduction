@@ -4,8 +4,7 @@ import main.java.builder.CarOrder;
 import main.java.builder.CarOrderBuilder;
 import main.java.builder.CarOrderDirector;
 import main.java.builder.HondaSportsCarOrderBuilder;
-import main.java.flyweight.Car;
-import main.java.flyweight.CarFactory;
+import main.java.flyweight.CarTypeFactory;
 import main.java.flyweight.CarType;
 
 public class Main {
@@ -57,7 +56,7 @@ public class Main {
         // Demonstrates the Flyweight classes that assign values to Car objects
         // based on type (Sports, Luxury, or SUV).
         //////////////////////////////////////////////////////////////////////////
-        CarFactory factory = new CarFactory();
+        CarTypeFactory factory = new CarTypeFactory();
         
         CarType sport = new CarType();
         sport.carData = factory.getCar("Sport");
