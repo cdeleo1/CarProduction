@@ -38,9 +38,9 @@ public class CarFactory {
                 car.luxury = 100;
                 car.safety = 90;
                 break;
-            case "SuvCar":
+            case "SUV":
                 car = new SuvCar();
-                car.type = "SuvCar";
+                car.type = "SUV";
                 car.speed = 60;
                 car.luxury = 75;
                 car.safety = 100;

@@ -4,6 +4,9 @@ import main.java.builder.CarOrder;
 import main.java.builder.CarOrderBuilder;
 import main.java.builder.CarOrderDirector;
 import main.java.builder.HondaSportsCarOrderBuilder;
+import main.java.flyweight.Car;
+import main.java.flyweight.CarFactory;
+import main.java.flyweight.CarType;
 
 public class Main {
 
@@ -33,26 +36,44 @@ public class Main {
     /* Main method */
     public static void main(String[] args) {
 
-        //////////////////////// BUILDER PATTERN /////////////////////////////
+        //////////////////////// BUILDER PATTERN /////////////////////////////////
 
-        /////////////////////////////////////////////////////////////////////////
-        // Demonstrates the CustomCarOrderBuilder (a concrete builder class) that /
-        // determines which dealership has the user-specified make/manufacturer /
-        // in its inventory (selected through a GUI). /
+        //////////////////////////////////////////////////////////////////////////
+        // Demonstrates the CustomCarOrderBuilder (a concrete builder class) that
+        // determines which dealership has the user-specified make/manufacturer 
+        // in its inventory (selected through a GUI).
         /////////////////////////////////////////////////////////////////////////
         new OrderFrame();
 
         /////////////////////////////////////////////////////////////////////////
-        // Demonstrates the HondaSportsCarOrderBuilder (a concrete builder class) /
-        // that displays the preset values in order to build a Honda Sports CarOrder /
+        // Demonstrates the HondaSportsCarOrderBuilder (a concrete builder class) 
+        // that displays the preset values in order to build a Honda Sports CarOrder.
         /////////////////////////////////////////////////////////////////////////
         CarOrderDirector carOrderDirector = new CarOrderDirector();
         CarOrderBuilder hondaSportsCarBuilder = new HondaSportsCarOrderBuilder();
         carOrderDirector.makeCar(hondaSportsCarBuilder);
-        CarOrder sportsCar = hondaSportsCarBuilder.getCar();
-        System.out.println(sportsCar);
+        CarOrder sportsCarOrder = hondaSportsCarBuilder.getCar();
+        System.out.println(sportsCarOrder);
 
-        ////////////////////////////////////////////////////////////////////////////
+        //////////////////////// FLYWEIGHT PATTERN ///////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////
+        // Demonstrates the Flyweight classes that assign values to Car objects
+        // based on type (Sports, Luxury, or SUV).
+        //////////////////////////////////////////////////////////////////////////
+        CarFactory factory = new CarFactory();
+        
+        CarType sportsCar = new CarType();
+        sportsCar.carData = factory.getCar("Sport");
+        sportsCar.carData.assignCarRatings(sportsCar);
+        
+        CarType luxuryCar = new CarType();
+        sportsCar.carData = factory.getCar("Luxury");
+        sportsCar.carData.assignCarRatings(sportsCar);
+        
+        CarType suvCar = new CarType();
+        sportsCar.carData = factory.getCar("SUV");
+        sportsCar.carData.assignCarRatings(sportsCar);
 
     } /* End of main(String[] args) */
 } /* End of Main class */
